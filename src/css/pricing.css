@@ -1,0 +1,25 @@
+.Pricing{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+.Pricing div{
+    height: 200px;
+    width:100%;
+    border:2px solid gray;
+}
+#box1{
+    background-color:#74b01b;
+}
+#box2{
+    background-color:#74b01b;
+
+}
+#box3{
+    background-color:#74b01b;
+
+}
+#box4{
+    background-color:#193297;
+
+}

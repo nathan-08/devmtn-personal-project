@@ -1,0 +1,61 @@
+
+.contact-container{
+    width:100%;
+    min-height:100%;
+    background:#c6f87600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding-left:12px;
+    padding-top:12px;
+    padding-bottom: 12px;
+}
+
+#email-input{
+    height: 32px;
+    width: 20%;
+    margin-bottom: 8px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #dffdaf;
+}
+#message-input{
+    height: 180px;
+    width: 60%;
+    vertical-align: top;
+    overflow-y: auto;
+    overflow-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+    max-height:180px;
+    max-width:60%;
+    background-color: #dffdaf;
+}
+
+#contact1{
+    background-image: url('./../img/letter.jpg');
+    background-repeat: no-repeat;
+    background-size: 140% 120%; /*60 on small screen*/
+    background-position:  center;
+    background-attachment: fixed;
+    min-height:200px; 
+}
+#submit-button{
+    
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    padding: 5px 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+.border-bottom{
+    margin-left: 8%;
+    width: 80%;
+    height: 20px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid gray;
+}
+#about{
+    background-color:white;
+    width:100%;
+    min-height:300px;
+}

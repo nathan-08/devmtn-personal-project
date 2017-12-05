@@ -5,21 +5,12 @@ import './css/reset.css'
 import { Link } from 'react-router-dom'
 import './css/button.css'
 import './css/app.css'
+import './css/border-bottom.css'
+import seal from './img/CAMS_SEAL.gif'
 
 
 class App extends Component {
-  componentDidMount() {
-    window.google.books.load()
-
-    const alertNotFound = () => {
-      alert('could not embed the book!');
-    }
-    const initialize = () => {
-      const viewer = new window.google.books.DefaultViewer(document.getElementById('viewerCanvas'));
-      viewer.load("kI5WAAAAcAAJ", alertNotFound);
-    }
-    window.google.books.setOnLoadCallback(initialize);
-  }
+  
   render() {
 
 
@@ -47,7 +38,9 @@ class App extends Component {
 
 
         <div className='footer' >
-          <div > Footer </div> </div>
+          <div id='cams-seal' >  <img src={seal}/>
+            </div>   
+          </div>
 
       </div>
     );

@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+/*font-family: 'Open Sans', sans-serif; */
+
 .App{
     display: block;
-    height: 100vh;
+    min-height: 100vh;
     width: 98vw;
     background-color: lightcyan;
+    font-family: 'Open Sans', sans-serif;
+    font-size:15px;
 }
 .navbar-thin{
     height:40px;
@@ -59,20 +64,25 @@ Applies to all Components
 */
 .Component{
     width:100%;
-    min-height: calc(100% - 240px);
+    min-height: calc(100% - 440px);
     background-color: white;
 }
 
 
 .footer{
-    height: 80px;
-    background-color: #74b01b;
+    height: 280px;
+    background-color: white;  /*74b01b*/
     
+}
+#cams-seal{
+    width: 180px;
+    height: 180px;
 }
 
 @media (max-width: 500px){
     .logo{
-        background-size: 400px;        
+        background-size: 400px;  
+              
     }
     .App{
         width: 100vw;
@@ -80,4 +90,32 @@ Applies to all Components
     .btn{
         margin-right:0;
     }
+    .navbar{
+        height:80px;
+    }
+    .Component{
+        min-height: calc(100% - 400px);
+    }
+}
+
+h3 {
+    letter-spacing: 1.8px;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    font-size:1.1em;
+}
+p {
+    letter-spacing: 1.8px;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    font-size:.9em;
+
+}
+
+li {
+    margin-top:8px;
+    line-height: 1.2;
+}
+h4{
+    color:blue;
 }

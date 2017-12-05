@@ -3,23 +3,36 @@
     flex-direction: column;
     width:100%;
 }
-.Pricing div{
-    height: 200px;
-    width:100%;
-    border:2px solid gray;
-}
+
 #box1{
-    background-color:#74b01b;
+     background-image: url('./../img/regulatory.jpg');
+     background-repeat: no-repeat;
+     background-size: 100% 120%; /*60 on small screen*/
+     background-position: top center;
+     background-attachment: fixed;
+     height:200px;
+     padding-left:60%;
+   
 }
-#box2{
-    background-color:#74b01b;
-
+.border-bottom{
+    margin-left: 8%;
+    width: 80%;
+    height: 20px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid gray;
 }
-#box3{
-    background-color:#74b01b;
-
+.services-description{
+    padding-left: 20%;
+    padding-right: 16px;
 }
-#box4{
-    background-color:#193297;
+.services-description h3{
+    text-align: right;
+}
 
+.services-description1{
+    padding-right: 20%;
+    padding-left: 16px;
+}
+.services-description1{
+    background-color: rgb(255, 255, 255);
 }

@@ -69,6 +69,7 @@ export default class Contact extends Component {
                                         </p>
                                         <br/>
                                         </div>
+                                            <input id='name-input' placeholder='name' />
                                             <input id='email-input' placeholder='email' />
                                         
                                        

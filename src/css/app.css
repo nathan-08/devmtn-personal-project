@@ -111,11 +111,26 @@ p {
     font-size:.9em;
 
 }
+ul{
+    
+    list-style-position: inside;
+}
 
 li {
+    list-style-position: inside;
     margin-top:8px;
     line-height: 1.2;
+    margin-left: 20px;
+    text-indent: -1.4em;
+    
 }
 h4{
     color:blue;
+}
+li {
+    list-style-type: disc;
+    
+}
+li p, li h4{
+    margin-left: 20px;
 }

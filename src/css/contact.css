@@ -12,6 +12,14 @@
     padding-top:12px;
     padding-bottom: 12px;
 }
+#name-input{
+    height: 32px;
+    width: 20%;
+    margin-bottom: 8px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #dffdaf;
+
+}
 
 #email-input{
     height: 32px;

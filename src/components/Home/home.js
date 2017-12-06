@@ -91,16 +91,16 @@ export default class Home extends Component {
                     </p>
                                         <ul>
                                             <li>
-                                                · Incorporate policies, procedures, and internal controls that include provisions for complying with the applicable requirements of the BSA;
+                                            Incorporate policies, procedures, and internal controls that include provisions for complying with the applicable requirements of the BSA;
                                             </li>
                                             <li>
-                                                · Designate an AML Compliance Officer;
+                                            Designate an AML Compliance Officer;
                                             </li>
                                             <li>
-                                                · Provide for on-going training of employees; and
+                                            Provide for on-going training of employees; and
                                             </li>
                                             <li>
-                                                · Provide for independent testing of the firm's AML program.
+                                            Provide for independent testing of the firm's AML program.
                                             </li>
                                         </ul>
                                         <br />
@@ -158,25 +158,25 @@ export default class Home extends Component {
                                         </p>
                                         <br />
                                         <ul>
-                                            <li>·   Overall integrity and effectiveness of your firm's AML compliance program;
+                                            <li>Overall integrity and effectiveness of your firm's AML compliance program;
                                                     </li>
-                                            <li>·   Firm designation of an AML Compliance Officer;
+                                            <li>Firm designation of an AML Compliance Officer;
                                                     </li>
-                                            <li>·   Senior management approval of the firm's AML compliance program;
+                                            <li>Senior management approval of the firm's AML compliance program;
                                                     </li>
-                                            <li>·   Monitoring for and detection of suspicious activities;
+                                            <li>Monitoring for and detection of suspicious activities;
                                                     </li>
-                                            <li>·   Firm CIP (when applicable);
+                                            <li>Firm CIP (when applicable);
                                                     </li>
-                                            <li>·   BSA reporting and recordkeeping;
+                                            <li>BSA reporting and recordkeeping;
                                                     </li>
-                                            <li>·   Information sharing with law enforcement and other financial institutions;
+                                            <li>Information sharing with law enforcement and other financial institutions;
                                                     </li>
-                                            <li>·   Firm handling of FinCEN 314(a) requests;
+                                            <li>Firm handling of FinCEN 314(a) requests;
                                                     </li>
-                                            <li>·   Independent testing of your firm's AML compliance program; and
+                                            <li>Independent testing of your firm's AML compliance program; and
                                                     </li>
-                                            <li>·   Staff training.
+                                            <li>Staff training.
                                                     </li>
 
                                         </ul>

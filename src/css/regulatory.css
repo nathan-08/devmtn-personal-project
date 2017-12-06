@@ -30,11 +30,4 @@
     background-color: rgb(255, 255, 255);
 }
 
-li {
-    list-style-type: disc;
-    
-}
-li p, li h4{
-    margin-left: 20px;
-}
 

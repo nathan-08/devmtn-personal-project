@@ -1,12 +1,4 @@
-#reg1{
-    background-image: url('./../img/desk.png');
-    background-repeat: no-repeat;
-    background-size: 100% 90%; /*60 on small screen*/
-    background-position:  top center;
-    background-attachment: fixed;
-    height:200px;  /*180 on small screen*/
-    padding-left:60%;  
-}
+
 .border-bottom{
     margin-left: 8%;
     width: 80%;

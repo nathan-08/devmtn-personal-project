@@ -4,7 +4,7 @@
 .App{
     display: block;
     min-height: 100vh;
-    width: 98vw;
+    width: 100vw;
     background-color: lightcyan;
     font-family: 'Open Sans', sans-serif;
     font-size:15px;
@@ -69,14 +69,21 @@ Applies to all Components
 }
 
 
-.footer{
+#footer{
     height: 280px;
     background-color: white;  /*74b01b*/
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     
 }
 #cams-seal{
     width: 180px;
     height: 180px;
+}
+#seal-img{
+    opacity: 1;
 }
 
 @media (max-width: 500px){
@@ -85,6 +92,9 @@ Applies to all Components
               
     }
     .App{
+        width: 100vw;
+    }
+    .Component{
         width: 100vw;
     }
     .btn{
@@ -113,7 +123,7 @@ p {
 }
 ul{
     
-    list-style-position: inside;
+    /* list-style-position: inside; */
 }
 
 li {

@@ -13,7 +13,7 @@ const colors = [
 
 const Wrapper = styled.div`
   display: flex;
-  width: 98vw;
+  width: 100vw;
   min-height: 100vh;
 `
 const SlideBox = styled.div`
@@ -27,7 +27,7 @@ overflow: hidden;
 `
 const ViewBody = styled.div`
 overflow: hidden;
-width: 98vw;
+width: 100vw;
 `
 
 export default class Home extends Component {
@@ -60,15 +60,17 @@ export default class Home extends Component {
                             <ViewBody>
                                 <div className='Home Component' >
                                     <section className='home-first-section'>
-                                        <div className='partnered-aml'>
+                                        <div className='bg200 homebg'>
 
                                         </div>
 
                                     </section>
 
-                                    <div className='explanation'>
+                                    <div className='services-description'>
                                         <h3>SIRS: PROVIDING PARTNERED AML COMPLIANCE SERVICES</h3>
                                         <br />
+                                    </div>
+                                    <div className='services-description1'>
                                         <p>SIRS provides customized AML complmiance programs for non-bank
                 financial institutions.
             </p>
@@ -77,6 +79,7 @@ export default class Home extends Component {
                 your company become fully compliant with AML regulations applicable to your business activites.
             </p>
                                     </div>
+
                                     <br/>
                                     <div id='border-bottom'>
                                     </div>
@@ -85,6 +88,8 @@ export default class Home extends Component {
                                             SIRS' AML COMPLIANCE SERVICES
                 </h3>
                                         <br />
+                                        </div>
+                                        <div className='services-description1'>
                                         <p>31 CFR Chapter X requires each financial institution to develop and implement a
                     written anti-money laundering compliance program. At a minimum, each institution'section
                     AML compliance program must:
@@ -112,6 +117,7 @@ export default class Home extends Component {
                                     <br/>
                                     <div id='border-bottom'>
                                     </div>
+
                                     <div className='services-description1'>
                                         <h3>
                                             Compliance Programs (written policies and procedures)
@@ -190,7 +196,9 @@ export default class Home extends Component {
                                         <h3>
                                             Electronic Delivery of AML Program Files
                                     </h3>
+                                    </div>
                                     <br/>
+                                    <div className='services-description1'>
                                         <p>
                                             Using cloud server technology, a financial institution will upload its files to a secure, online file server. SIRS will then review
                                     these files to test the institution's AML program. 

@@ -1,13 +1,4 @@
-#sea1{
-    background-image: url('./../img/capitol.JPG');
-    background-repeat: no-repeat;
-    background-size: 100% 90%; /*60 on small screen*/
-    background-position: top center;
-    background-attachment: fixed;
-    height:200px;
-    padding-left:60%;
-    
-}
+
 #sea1 p{
     background: rgba(255, 255, 255,.2);
     

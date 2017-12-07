@@ -13,7 +13,7 @@ const colors = [
 
 const Wrapper = styled.div`
   display: flex;
-  width: 98vw;
+  width: 100vw;
   min-height: 100vh;
 `
 const SlideBox = styled.div`
@@ -27,7 +27,7 @@ overflow: hidden;
 `
 const ViewBody = styled.div`
 overflow: hidden;
-width: 98vw;
+width: 100vw;
 `
 
 
@@ -58,7 +58,7 @@ export default class Pricing extends Component {
                         <ViewBox bgColor={colors[4]} width={styles[4].width}>
                             <ViewBody>
                                 <div className='Pricing Component'>
-                                    <div id='box1'></div>
+                                    <div className='pricingbg bg200'></div>
                                     <div className='services-description'>
                                         <h3>
                                             AML Compliance Program, Training & Testing
@@ -72,19 +72,19 @@ export default class Pricing extends Component {
                 </p>
                                         <ul>
                                             <li>
-                                                ·   Written Policies and Procedures. SIRS’ 11-page AML compliance program contains the policies and procedures needed to addresses AML regulations governing RMLOs.
+                                                Written Policies and Procedures. SIRS’ 11-page AML compliance program contains the policies and procedures needed to addresses AML regulations governing RMLOs.
                     With very few modifications required, this document will serve as the RMLO's official AML Compliance Program.
                     </li>
                                             <li>
-                                                ·   Training. You will also receive a training presentation that covers the major points of AML requirements for mortgage lenders.
+                                                Training. You will also receive a training presentation that covers the major points of AML requirements for mortgage lenders.
                     This presentation may be shown or distributed to firm personnel to meet your obligation to provide AML training to your employees.
                     </li>
                                             <li>
-                                                ·   Mortgage Fraud and Money Laundering Review ("MFMLR") form. SIRS' MFMLR is a review form that can be easily integrated into your loan processing procedures. The use of SIRS' MFMLR will
+                                                Mortgage Fraud and Money Laundering Review ("MFMLR") form. SIRS' MFMLR is a review form that can be easily integrated into your loan processing procedures. The use of SIRS' MFMLR will
                     provide documentation of your firm’s compliance with its obligation to monitor applications in order to detect suspicious activities.
                     </li>
                                             <li>
-                                                ·   Independent AML Test. As required by the BSA (31 C.F.R. § 1029.210(b)(4)), SIRS will conduct an annual review of your policies, procedures and business practices to ensure that they are in compliance with AML requirements. After conducting the test, we will provide you with a 2-5
+                                                Independent AML Test. As required by the BSA (31 C.F.R. § 1029.210(b)(4)), SIRS will conduct an annual review of your policies, procedures and business practices to ensure that they are in compliance with AML requirements. After conducting the test, we will provide you with a 2-5
                     page report of our findings. With each finding, we will provide our expert recommendation concerning the best way to correct the deficiency.
                     </li>
                                         </ul>
@@ -105,19 +105,19 @@ export default class Pricing extends Component {
                                             SIRS' services for MSBs include:
                 </p>
                                         <ul>
-                                            <li>·   Written Policies, Procedures, and Internal Controls
+                                            <li>Written Policies, Procedures, and Internal Controls
                         (“AML Compliance Program”). SIRS’ MSB AML Compliance Program addresses the applicable requirements of the BSA.
 
                     </li>
-                                            <li>·   Training. You will receive a training presentation that may be used to provide the education and training required by § 1022.210(d)(3).
+                                            <li>Training. You will receive a training presentation that may be used to provide the education and training required by § 1022.210(d)(3).
                          This presentation may be shown or distributed to firm personnel to meet your obligation to provide AML training to your employees.
 
                     </li>
-                                            <li>·   SIRS’ Risk Assessment Template and Transaction Review Form.
+                                            <li>SIRS’ Risk Assessment Template and Transaction Review Form.
                         These documents are essential to your AML Compliance Program and will help to ensure that it meets your obligations under the BSA.
 
                     </li>
-                                            <li>·   Independent AML Review. As required by the BSA (31 C.F.R. § 1022.210(d)(4)), SIRS will conduct an annual review of your policies, procedures
+                                            <li>Independent AML Review. As required by the BSA (31 C.F.R. § 1022.210(d)(4)), SIRS will conduct an annual review of your policies, procedures
                         and internal controls to ensure that they satisfy AML regulatory requirements. After conducting the review, we will provide you with a 4-6 page report of our findings
                         and recommendations. With each finding, we will provide our expert recommendation concerning the best way to address the deficiency.
 
@@ -136,11 +136,11 @@ export default class Pricing extends Component {
                 </p>
                                         <br />
                                         <ul>
-                                            <li>·   Independent AML Test. As required by FINRA Rule 3310(c), SIRS will conduct an independent review of your AML compliance program.
+                                            <li>Independent AML Test. As required by FINRA Rule 3310(c), SIRS will conduct an independent review of your AML compliance program.
                         After the test is completed, you will receive a detailed test report that includes SIRS' findings and recommendations.
                         With each finding, we will provide our expert recommendation concerning the best way to address the deficiency.
                     </li>
-                                            <li>·   Training. You will also receive a training presentation that covers the major points of AML requirements for broker/dealers.
+                                            <li>Training. You will also receive a training presentation that covers the major points of AML requirements for broker/dealers.
                         This presentation may be shown or distributed to firm personnel to meet your obligation to provide ongoing AML training to your employees.
                     </li>
                                         </ul>
@@ -164,16 +164,16 @@ export default class Pricing extends Component {
                 </p>
                                         <br />
                                         <ul>
-                                            <li>·   Written Policies and Procedures. SIRS’ AML compliance program contains the policies and procedures needed to
+                                            <li>Written Policies and Procedures. SIRS’ AML compliance program contains the policies and procedures needed to
                         addresses AML regulations governing precious metals and jewelry dealers. Among other things, this document includes a
                         comprehensive AML compliance program, an outline for the risk assessment required by BSA § 1027, an itemized list of records
                         that must be created and maintained by dealers,
                         and an 8-point quarterly report form that will allow for easy documentation of many required AML activities.
                     </li>
-                                            <li>·   Training Materials. We will also provide you with training materials that cover the major points of AML requirements for dealers in precious metals, stones and jewels.
+                                            <li>Training Materials. We will also provide you with training materials that cover the major points of AML requirements for dealers in precious metals, stones and jewels.
                         These materials may be distributed to your employees to meet your obligation to provide AML training.
                     </li>
-                                            <li>·   Independent AML Test. As required by 31 C.F.R. § 1027.210(b)(4), SIRS will conduct an independent review of your AML compliance program. After the test is completed, you will receive a detailed test report that includes SIRS' findings and recommendations.
+                                            <li>Independent AML Test. As required by 31 C.F.R. § 1027.210(b)(4), SIRS will conduct an independent review of your AML compliance program. After the test is completed, you will receive a detailed test report that includes SIRS' findings and recommendations.
                         With each finding, we will provide our expert recommendation concerning the best way to address the deficiency.
                     </li>
                                         </ul>

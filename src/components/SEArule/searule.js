@@ -13,7 +13,7 @@ const colors = [
 
 const Wrapper = styled.div`
   display: flex;
-  width: 98vw;
+  width: 100vw;
   min-height: 100vh;
 `
 const SlideBox = styled.div`
@@ -27,7 +27,7 @@ overflow: hidden;
 `
 const ViewBody = styled.div`
 overflow: hidden;
-width: 98vw;
+width: 100vw;
 `
 
 export default class SEArule extends Component{
@@ -57,7 +57,7 @@ export default class SEArule extends Component{
             <ViewBox bgColor={colors[4]} width={styles[4].width}>
               <ViewBody>
             <div className='SEArule Component'>
-            <div id='sea1'>
+            <div className='searulebg bg200'>
             
             </div>
             <div className='services-description'>
@@ -85,8 +85,10 @@ export default class SEArule extends Component{
             </div>
             <br/>
             <div id='border-bottom'/>
-            <div className='services-description1'>
+            <div className='services-description'>
             <h3>SEA Rule 17a-4</h3>
+            </div>
+            <div className='services-description1'>
             <br/>
             <p>
             SEA Rule 17a-4(f) allows a B/D "to employ, under certain conditions, 
@@ -100,6 +102,7 @@ export default class SEArule extends Component{
             <h4>
                 Compliant Data Backup
             </h4>
+            
             <p>
             17a-4(f)(3)(iii) requires a B/D to “store separately from the original, a duplicate copy of the [firm’s electronic records]….” 
             This storage must comply with the standards (non-erasable, non-rewriteable) set forth in 17a-4(f)(2)(ii).
@@ -127,17 +130,21 @@ export default class SEArule extends Component{
                 To address this requirement, SIRS offers its D3P services. Through a contractual agreement, SIRS establishes access to the B/D's records. For an annually renewable 
                 service charge of $500, SIRS’ staff will remain continually available to respond to regulatory requests for document retrieval services.  
                 </p>
-            </div>
+                </div>
+            
             <br/>
             <br/>
             <div id='border-bottom'/>
-            <div className='product-description'>
+            <div className='services-description'>
             <h3>
             17a-4 Certifications Provided
             </h3>
+            </div>
+            <div className='services-description1'>
             <p>
             By subscribing to SIRS' D3P services, you will receive the following:
             </p>
+            
             <br/>
             <h4>
             Third-party Undertaking Letter

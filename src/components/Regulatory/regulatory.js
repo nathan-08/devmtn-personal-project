@@ -13,7 +13,7 @@ const colors = [
 
 const Wrapper = styled.div`
   display: flex;
-  width: 98vw;
+  width: 100vw;
   min-height: 100vh;
 `
 const SlideBox = styled.div`
@@ -27,7 +27,7 @@ overflow: hidden;
 `
 const ViewBody = styled.div`
 overflow: hidden;
-width: 98vw;
+width: 100vw;
 `
 
 export default class Regulatory extends Component{
@@ -57,7 +57,7 @@ export default class Regulatory extends Component{
             <ViewBox bgColor={colors[4]} width={styles[4].width}>
               <ViewBody>
             <div className='Regulatory Component'>
-            <div id='reg1'>
+            <div className='bg200 regulatorybg'>
             </div>
             
             <div className='services-description'>

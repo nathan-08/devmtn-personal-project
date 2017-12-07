@@ -3,6 +3,9 @@ import { StaggeredMotion, spring } from 'react-motion'
 import styled from 'styled-components'
 import './../../css/contact.css'
 import './../../css/button.css'
+import axios from 'axios'
+import { getUser } from './../../ducks/reducer';
+import { connect } from 'react-redux';
 
 const colors = [
     '#def5b9',
@@ -14,7 +17,7 @@ const colors = [
 
 const Wrapper = styled.div`
   display: flex;
-  width: 98vw;
+  width: 100vw;
   min-height: 100vh;
 `
 const SlideBox = styled.div`
@@ -28,10 +31,58 @@ overflow: hidden;
 `
 const ViewBody = styled.div`
 overflow: hidden;
-width: 98vw;
+width: 100vw;
 `
 
-export default class Contact extends Component {
+class Contact extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            formName: '',
+            formEmail: '',
+            formMessage: ''
+        }
+    this.nameInput = this.nameInput.bind(this)
+    this.emailInput = this.emailInput.bind(this)
+    this.messageInput = this.messageInput.bind(this)
+    this.submitForm = this.submitForm.bind(this)
+    }
+    nameInput(e){
+        this.setState({
+            formName: e.target.value
+        })
+    }
+    emailInput(e){
+        this.setState({
+            formEmail: e.target.value
+        })
+    }
+    messageInput(e){
+        this.setState({
+            formMessage: e.target.value
+        })
+    }
+    submitForm(){
+        if (this.state.formName && this.state.formEmail && this.state.formMessage){
+            /**make axios call */
+        axios.post('http://localhost:3005/contactus', { name: this.state.formName, email: this.state.formEmail, message: this.state.formMessage })
+             .then( result => {
+                 this.setState({
+                     formName: '',
+                     formEmail: '',
+                     formMessage: '',
+                     isLoggedIn: false
+                 })
+                 alert('Message sent.')
+             })
+        } else {
+            /**if missing required fields */
+            alert('Please enter a name, email and message.')
+        }
+    }
+    componentDidMount(){
+        this.props.getUser();
+    }
     render() {
         return (
             <StaggeredMotion
@@ -59,7 +110,7 @@ export default class Contact extends Component {
                             <ViewBody>
 
                                 <div className='Contact Component'>
-                                    <div id="contact1">
+                                    <div className='contactbg bg200'>
                                     
                                     </div>
                                     <div className='contact-container'>
@@ -69,18 +120,25 @@ export default class Contact extends Component {
                                         </p>
                                         <br/>
                                         </div>
-                                            <input id='name-input' placeholder='name' />
-                                            <input id='email-input' placeholder='email' />
+                                            <input onChange={this.nameInput} id='name-input' placeholder='name' value={this.state.formName} />
+                                            <input onChange={this.emailInput} id='email-input' placeholder='email' value={this.state.formEmail}/>
                                         
                                        
-                                            <textarea id='message-input' placeholder='your message' />
+                                            <textarea onChange={this.messageInput} id='message-input' placeholder='your message' value={this.state.formMessage} />
                                             <br/>
-                                            <button id='submit-button' className='hvr-fade'>Submit</button>
+                                            <button onClick={this.submitForm} className='submit-button hvr-fade'>Submit</button>
                                         
                                     </div>
                                     <br/>
                                     <div id='border-bottom'/>
                                     <section id='about'>
+                                            <a href={process.env.REACT_APP_LOGIN}><button className='submit-button hvr-fade'>LOGIN</button></a>
+                                            <a href='http://localhost:3005/auth/logout'><button className='submit-button hvr-fade'>LOGOUT</button></a>
+
+                                            <div id='user_display' style={{'display': this.props.user.namefirst ? "block" : "none"}}>
+                                            welcome, {this.props.user.namefirst}
+                                            <img src={this.props.user.picture}/>
+                                            </div>
 
                                     </section>
                                     
@@ -95,3 +153,7 @@ export default class Contact extends Component {
         )
     }
 }
+function mapStateToProps(state) {
+    return { user: state.userData }
+}
+export default connect(mapStateToProps, { getUser })(Contact)

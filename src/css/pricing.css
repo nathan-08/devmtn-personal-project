@@ -4,16 +4,7 @@
     width:100%;
 }
 
-#box1{
-     background-image: url('./../img/regulatory.jpg');
-     background-repeat: no-repeat;
-     background-size: 100% 120%; /*60 on small screen*/
-     background-position: top center;
-     background-attachment: fixed;
-     height:200px;
-     padding-left:60%;
-   
-}
+
 .border-bottom{
     margin-left: 8%;
     width: 80%;

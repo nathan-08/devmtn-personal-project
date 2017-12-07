@@ -15,8 +15,11 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-motion": "^0.5.2",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-promise-middleware": "^5.0.0",
     "styled-components": "^2.2.4"
   },
   "scripts": {
@@ -38,5 +41,6 @@
   "bugs": {
     "url": "https://github.com/nathan-08/sirs-clone-2/issues"
   },
-  "homepage": "https://github.com/nathan-08/sirs-clone-2#readme"
+  "homepage": "https://github.com/nathan-08/sirs-clone-2#readme",
+  "proxy": "http://localhost:3005"
 }

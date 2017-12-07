@@ -5,6 +5,16 @@
     background-color: white;
     margin-right:14px;
 }
+
+.submit-button{
+  
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+  padding: 5px 16px;
+  font-family: 'Open Sans', sans-serif;
+  margin-right:12px;
+}
+
 .btn:focus{
     outline:none;
 }

@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom'
 import './css/button.css'
 import './css/app.css'
 import './css/border-bottom.css'
+import './css/bg.css'
 import seal from './img/CAMS_SEAL.gif'
 
 
 class App extends Component {
-  
+
   render() {
 
 
@@ -25,11 +26,11 @@ class App extends Component {
 
         </nav>
         <nav className='navbar' >
-        <div className='logo'>
-        
-        </div>
-        
-        <div className='heading' >
+          <div className='logo'>
+
+          </div>
+
+          <div className='heading' >
 
           </div>
         </nav>
@@ -37,11 +38,10 @@ class App extends Component {
         {router}
 
 
-        <div className='footer' >
-          <div id='cams-seal' >  <img src={seal}/>
-            </div>   
+        <div id='footer' >
+          <div id='cams-seal' >  <img id='seal-img' src={seal} />
           </div>
-
+        </div>
       </div>
     );
   }

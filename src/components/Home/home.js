@@ -60,7 +60,7 @@ export default class Home extends Component {
                             <ViewBody>
                                 <div className='Home Component' >
                                     <section className='home-first-section'>
-                                        <div className='bg200 homebg'>
+                                        <div className='bg200 homebg'>homebg
 
                                         </div>
 

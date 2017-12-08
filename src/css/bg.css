@@ -1,58 +1,25 @@
-.homebg{ /*home.js*/
-    text-justify: center;
-    font-weight: 400;
-    color: black;    
-    padding-top: 120px;
+.bg200{    
+    height: 300px;    
     width: 100%;
-    text-align: center;
-    font-size: 1em;
-    line-height: 1.2;
-    letter-spacing: 1.8px;
-    height: 200px;
-    background-image: url('./../img/business-meeting-alt.jpg');
-    background-size: 100% 100%;
-    background-position: 0 40px;
-    text-align:left;
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    /* background-position: 0 100px; */
-    /* background-size: 100% 380%; attachment scroll  background-position: 0 -40px; */
-    margin-bottom:8px;
+    background-position: center 40px;
+    background-size: auto;
+    /* background-repeat: no-repeat; */
+} 
+.homebg{ /*home.js*/
+    background-image: url('./../img/business-meeting1920x420.jpg');
 }
 .pricingbg{ /*pricing.js*/
-    background-image: url('./../img/regulatory-1920.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 120%; /*60 on small screen*/
-    background-position: 0 -280px;
-    background-attachment: fixed;
-    height:200px;
-    padding-left:60%;  
+    background-image: url('./../img/regulatory1920x420.jpg');
 }
 .regulatorybg{ /*regulatory.js*/
-    background-image: url('./../img/desk.png');
-    background-repeat: no-repeat;
-    background-size: 100% 60%;
-    background-position:  0 -80px;
-    background-attachment: fixed;
-    height:200px;  /*180 on small screen*/
-    padding-left:60%;  
+    background-image: url('./../img/desk1920x420.png');
 }
 .searulebg{ /*sea.js*/
-    background-image: url('./../img/capitol-1420.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 0 -180px;
-    background-attachment: fixed;
-    height:200px;
-    padding-left:60%;
+    background-image: url('./../img/capitol1920x420.jpg');      
 }
 .contactbg{ /*contact.js*/
-    background-image: url('./../img/letter.jpg');
-    background-repeat: no-repeat;
-    background-size: 140% 120%; 
-    background-position:  center;
-    background-attachment: fixed;
-    height:200px; 
+    background-image: url('./../img/letter1920x420.jpg');
 }
 /***small screens */
 @media(max-width: 500px){
@@ -68,10 +35,7 @@
         background-size: 400% 100%;
         background-position: 80px 40px;        
     }  
-    .regulatorybg{
-        background-size: 200% 100%;
-        background-position: 0 80px;
-    }
+    
     .searulebg{
         background-size: 240% 100%;
         background-position: 80px 0;
@@ -91,10 +55,7 @@
         background-position: -220px -60px;
         background-size: 180% 80%;
     }
-    .regulatorybg{
-        background-position: -40px -40px;
-        background-size: 200% 60%;
-    }
+    
     .searulebg{
         background-position: 0px -200px;
         background-size: 200% 100%;
@@ -115,77 +76,37 @@
 1600x1200
 1920x1440
 --------
-16:10
+
+
+16:10  [desktop]
 --------
 1280x800
 1440x900
 1680x1050
 1920x1200
-2560x1600
 
-*/
-@media(min-width: 1280px){ /*1280x800*/
+
+
+2560x1600
+--------
+[phones]  ? portrait ? 
+---------
+[tablets]
+
+/**aspect ratio media queries*/
+@media (aspect-ratio: 16/10), (aspect-ratio: 16/9) { /*1920x1200*/
+    .bg200{        
+        background-attachment: fixed;
+        background-position: center 40px;
+        /* background-size: contain; */
+    }    
     .homebg{
-        background-size: 180% 120%;
-        background-position: -180px 40px;        
-    }
-    .regulatorybg{
-        background-position: 0 20px;
-    }
-    .contactbg{
-        background-position: 0 -320px;
-    }
-}
-@media(min-width: 1440px){ /*1440x900*/
-    .regulatorybg{
-        background-position: 0 -32px;
-    }
-}
-@media(min-width: 1680px){/*1680x1050*/
-    .homebg{
-        background-size: 140% 100%;
-    }
-    .regulatorybg{
-        background-position: 0 -120px;
-        background-size: 100% 60%;        
-    }
-    .contactbg{
-        background-position: 0 -380px;
-    }
-}
-@media(min-width: 1920px){/*1920x1200*/
-    .bg200{
-        height: 300px;
-    }
-    .Component{
-        min-height: calc(100% - 580px);
-    }
-    .contactbg{
-        background-position: -80px -510px;
+        background-image: url('./../img/business-meeting1920x420.jpg');
     }
     .pricingbg{
-        background-position: 0 -460px;
-    }
-    .searulebg{
-        background-position: 0 -480px;
+        background-image: url('./../img/regulatory1920x420.jpg');
     }
     .regulatorybg{
-        background-position: 0 -40px;
-    }
-    .homebg{
-        background-position: -160px 40px;
-    }
-/*short screens*/
-}
-@media(max-height: 800px) and (min-width: 800px){
-    .homebg{
-        background-size: auto;
-        background-position: -120px 40px;
-    }
-    .pricingbg{
-        background-position: 0 -240px;
-    }
-    .regulatorybg{
-        background-position: 0 40px;
+        background-image: url('./../img/desk1920x420.png');
     }
 }

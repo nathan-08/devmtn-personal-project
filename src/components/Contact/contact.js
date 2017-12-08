@@ -20,15 +20,20 @@ const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
 `
-const SlideBox = styled.div`
-flex-basis: ${(props) => props.width}%;
-background: ${(props) => props.bgColor};
-`
-const ViewBox = styled.div`
-flex-basis: ${(props) => props.width}%;
-background: ${(props) => props.bgColor};
-overflow: hidden;
-`
+
+const SlideBox = styled.div.attrs({
+})`
+    flex-basis: ${props => props.width}%;
+    background: ${props => props.bgColor};  
+`;
+const ViewBox = styled.div.attrs({
+    
+})`
+    flex-basis: ${props => props.width}%;
+    background: ${props => props.bgColor};
+    overflow: hidden;
+`;
+
 const ViewBody = styled.div`
 overflow: hidden;
 width: 100vw;
@@ -110,9 +115,8 @@ class Contact extends Component {
                             <ViewBody>
 
                                 <div className='Contact Component'>
-                                    <div className='contactbg bg200'>
-                                    
-                                    </div>
+                                    <div className='contactbg bg200'></div>
+                                    <div id='contact-about-container'>
                                     <div className='contact-container'>
                                         <div id='explanation'>
                                         <p>
@@ -129,22 +133,26 @@ class Contact extends Component {
                                             <button onClick={this.submitForm} className='submit-button hvr-fade'>Submit</button>
                                         
                                     </div>
+                                    <div id='about'>
+
+
+                                    
+                                    </div>
+                                    </div>
                                     <br/>
                                     <div id='border-bottom'/>
-                                    <section id='about'>
+                                    
+                                    <section id='admin'>
                                             <a href={process.env.REACT_APP_LOGIN}><button className='submit-button hvr-fade'>LOGIN</button></a>
                                             <a href='http://localhost:3005/auth/logout'><button className='submit-button hvr-fade'>LOGOUT</button></a>
 
                                             <div id='user_display' style={{'display': this.props.user.namefirst ? "block" : "none"}}>
                                             welcome, {this.props.user.namefirst}
-                                            <img src={this.props.user.picture}/>
+                                            <img src={this.props.user.picture} alt='profile pic'/>
                                             </div>
-
-                                    </section>
-                                    
+                                    </section>                                
 
                                 </div>
-
                             </ViewBody>
                         </ViewBox>
                     </Wrapper>

@@ -19,6 +19,8 @@
     border-bottom: 1px solid #74b01b;
     display: flex;
     justify-content: flex-end;
+    
+    
 }
 
 .navbar{
@@ -46,13 +48,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     background-repeat: no-repeat;
     
 }
-.banner-logo-text{
+/* .banner-logo-text{
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: #193297;
     font-weight: bold;
     font-size:18px;
     text-shadow: 1px 2px white;
-}
+} */
 .navbar div{
     display:flex;
     width: 100%;
@@ -71,7 +73,7 @@ Applies to all Components
 
 #footer{
     height: 280px;
-    background-color: white;  /*74b01b*/
+    background-color: rgba(116,176,27,1);  /*74b01b*/
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -86,41 +88,25 @@ Applies to all Components
     opacity: 1;
 }
 
-@media (max-width: 500px){
-    .logo{
-        background-size: 400px;  
-              
-    }
-    .App{
-        width: 100vw;
-    }
-    .Component{
-        width: 100vw;
-    }
-    .btn{
-        margin-right:0;
-    }
-    .navbar{
-        height:80px;
-    }
-    .Component{
-        min-height: calc(100% - 400px);
-    }
-}
 
 h3 {
     letter-spacing: 1.8px;
     line-height: 1.2;
     font-family: 'Open Sans', sans-serif;
     font-size:1.1em;
+    text-align: center;
 }
 p {
-    letter-spacing: 1.8px;
+    letter-spacing: .05em;
     line-height: 1.2;
     font-family: 'Open Sans', sans-serif;
     font-size:.9em;
 
 }
+.p h3{
+    text-align: center;
+}
+
 
 
 li {
@@ -141,3 +127,49 @@ li {
 li p, li h4{
     margin-left: 20px;
 }
+/*
+text body formatting
+*****/
+.home--body{
+    display: flex;
+    width: 100vw;
+}
+
+.text-body{
+    margin: 0 4% 0 2%;
+    width: 80%;
+    padding-top: 12px;
+}
+.left-side-panel{
+    padding: 12px;
+    width: 20%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.h3{
+    text-align: right;
+    padding: 0 4% 0 0;
+}
+.p{
+    text-align: left;
+    padding: 0 20% 0 4%;
+}
+.quoted{
+    text-align: right;
+    width: 100%;
+}
+#nyc-img{
+    max-width: 100%;
+}
+.text-body{
+    margin: 0 4% 0 2%;
+    width: 80%;
+}
+#seal{
+    margin: 0 auto;
+    max-width: 100%;
+}
+/****************************************/

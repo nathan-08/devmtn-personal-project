@@ -10,6 +10,8 @@ import './css/bg.css'
 import seal from './img/CAMS_SEAL.gif'
 
 
+
+
 class App extends Component {
 
   render() {
@@ -34,13 +36,12 @@ class App extends Component {
 
           </div>
         </nav>
-
+      
         {router}
 
 
         <div id='footer' >
-          <div id='cams-seal' >  <img id='seal-img' src={seal} />
-          </div>
+          
         </div>
       </div>
     );

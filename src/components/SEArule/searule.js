@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { StaggeredMotion, spring } from 'react-motion'
 import styled from 'styled-components'
 import './../../css/searule.css'
+import RegulatoryNotices from './../RegulatoryNotices/regulatoryNotices'
 
 const colors = [
     '#def5b9',
@@ -16,15 +17,20 @@ const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
 `
-const SlideBox = styled.div`
-flex-basis: ${(props) => props.width}%;
-background: ${(props) => props.bgColor};
-`
-const ViewBox = styled.div`
-flex-basis: ${(props) => props.width}%;
-background: ${(props) => props.bgColor};
-overflow: hidden;
-`
+
+const SlideBox = styled.div.attrs({
+})`
+    flex-basis: ${props => props.width}%;
+    background: ${props => props.bgColor};  
+`;
+const ViewBox = styled.div.attrs({
+    
+})`
+    flex-basis: ${props => props.width}%;
+    background: ${props => props.bgColor};
+    overflow: hidden;
+`;
+
 const ViewBody = styled.div`
 overflow: hidden;
 width: 100vw;
@@ -57,14 +63,14 @@ export default class SEArule extends Component{
             <ViewBox bgColor={colors[4]} width={styles[4].width}>
               <ViewBody>
             <div className='SEArule Component'>
-            <div className='searulebg bg200'>
-            
-            </div>
-            <div className='services-description'>
+            <div className='searulebg bg200'></div>
+
+            <div className='home--body'>
+            <RegulatoryNotices/>
+            <div className='text-body'>
             <h3>SIRS' Third-party Access ("TAP" or "D3P") Compliance Services</h3>
             <br/>
-            </div>
-            <div className='services-description1'>
+            
             <h4> 
                 2017 Regulatory and Examination Priorities Letter
             </h4>
@@ -82,13 +88,11 @@ export default class SEArule extends Component{
             <br/>
             
             
-            </div>
+            
             <br/>
             <div id='border-bottom'/>
-            <div className='services-description'>
             <h3>SEA Rule 17a-4</h3>
-            </div>
-            <div className='services-description1'>
+            
             <br/>
             <p>
             SEA Rule 17a-4(f) allows a B/D "to employ, under certain conditions, 
@@ -130,17 +134,15 @@ export default class SEArule extends Component{
                 To address this requirement, SIRS offers its D3P services. Through a contractual agreement, SIRS establishes access to the B/D's records. For an annually renewable 
                 service charge of $500, SIRS’ staff will remain continually available to respond to regulatory requests for document retrieval services.  
                 </p>
-                </div>
+                
             
             <br/>
             <br/>
             <div id='border-bottom'/>
-            <div className='services-description'>
             <h3>
             17a-4 Certifications Provided
             </h3>
-            </div>
-            <div className='services-description1'>
+            
             <p>
             By subscribing to SIRS' D3P services, you will receive the following:
             </p>
@@ -166,10 +168,12 @@ export default class SEArule extends Component{
             Storage Media Representation and the Third-party Undertaking Letter. SIRS will provide you with these files.
             </p>
             
-            </div>
+            
             <br/>
             <br/>
             <div id='border-bottom'/>
+            </div>
+            </div>
             </div>
             
             </ViewBody>

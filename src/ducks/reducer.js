@@ -5,9 +5,7 @@ const initialState = {
 
 const GET_USER = 'GET_USER'
 
-export function getUser(){
-    let userInfo = {};
-    
+export function getUser(){    
     return {
         type: GET_USER,
         payload: axios.get('/auth/me').then( user => user.data)

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './../../css/pricing.css'
 import { StaggeredMotion, spring } from 'react-motion'
 import styled from 'styled-components'
+import RegulatoryNotices from './../RegulatoryNotices/regulatoryNotices'
 
 const colors = [
     '#def5b9',
@@ -16,15 +17,20 @@ const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
 `
-const SlideBox = styled.div`
-flex-basis: ${(props) => props.width}%;
-background: ${(props) => props.bgColor};
-`
-const ViewBox = styled.div`
-flex-basis: ${(props) => props.width}%;
-background: ${(props) => props.bgColor};
-overflow: hidden;
-`
+
+const SlideBox = styled.div.attrs({
+})`
+    flex-basis: ${props => props.width}%;
+    background: ${props => props.bgColor};  
+`;
+const ViewBox = styled.div.attrs({
+    
+})`
+    flex-basis: ${props => props.width}%;
+    background: ${props => props.bgColor};
+    overflow: hidden;
+`;
+
 const ViewBody = styled.div`
 overflow: hidden;
 width: 100vw;
@@ -59,7 +65,9 @@ export default class Pricing extends Component {
                             <ViewBody>
                                 <div className='Pricing Component'>
                                     <div className='pricingbg bg200'></div>
-                                    <div className='services-description'>
+                                    <div className='home--body'>
+                                    <RegulatoryNotices/>
+                                    <div className='text-body'>
                                         <h3>
                                             AML Compliance Program, Training & Testing
                 </h3>
@@ -89,10 +97,9 @@ export default class Pricing extends Component {
                     </li>
                                         </ul>
 
-                                    </div>
                                     <br />
                                     <div id='border-bottom' />
-                                    <div className='services-description'>
+                                    
                                         <h4>
                                             Money Services Business ("MSB"): $500-2,000
                 </h4>
@@ -123,10 +130,10 @@ export default class Pricing extends Component {
 
                     </li>
                                         </ul>
-                                    </div>
+                                    
                                     <br/>
                                     <div id='border-bottom' />
-                                    <div className='services-description'>
+                                    
                                         <br />
                                         <h4>
                                             Securities Broker/Dealer: $2,500
@@ -152,10 +159,10 @@ export default class Pricing extends Component {
                                             While some updates are needed, FINRA’s AML Small Firm Template provides an excellent set of AML policies and procedures for broker/dealers.
                 SIRS recommends that a B/D adapt FINRA’s template to fit its business model.
                 </h4>
-                                    </div>
+                                    
                                     <br />
                                     <div id='border-bottom' />
-                                    <div className='services-description'>
+                                    
                                         <h4>
                                             Dealer in Precious Metals, Stones & Jewels: $1,000
                 </h4>
@@ -178,9 +185,9 @@ export default class Pricing extends Component {
                     </li>
                                         </ul>
                                         <br />
-                                    </div>
+                                    
                                     <div id='border-bottom' />
-                                    <div className='services-description1'>
+                                   
                                         <h3>
                                             Enrollment
                 </h3>
@@ -190,10 +197,11 @@ export default class Pricing extends Component {
                 We will respond by sending you the quotation and additional information about our services.
                 </p>
                                         <br />
-                                    </div>
+                                    
                                     <br/>
                                     <div id='border-bottom'/>
-                                    
+                                    </div>
+                                    </div>
                                 </div>
 
                             </ViewBody>

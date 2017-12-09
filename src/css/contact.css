@@ -4,7 +4,21 @@
 }
 #about{
     width:75%;
-    background-color: lightcyan;
+    background-color: rgb(104, 236, 92);
+    padding: 12px;
+}
+@media(max-width:500px){
+    #contact-about-container{
+        flex-direction: column;
+    }
+    .contact-container{
+        width:100%;
+        margin: 0;
+        background-color: blue; /**why not working ? ? ? */
+    }
+    #about{
+        width:100%;
+    }
 }
 
 .contact-container{
@@ -13,7 +27,7 @@
     background:#c6f87600;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     margin: 0 auto;
     padding: 12px;

@@ -6,6 +6,7 @@ import './../../css/button.css'
 import axios from 'axios'
 import { getUser } from './../../ducks/reducer';
 import { connect } from 'react-redux';
+import kevbeck from './../../img/kevbeck.jpg'
 
 const colors = [
     '#def5b9',
@@ -120,8 +121,7 @@ class Contact extends Component {
                                     <div className='contact-container'>
                                         <div id='explanation'>
                                         <p>
-                                            Enter an email address and a your question for further information. 
-                                        </p>
+We'd love to hear from you!                                        </p>
                                         <br/>
                                         </div>
                                             <input onChange={this.nameInput} id='name-input' placeholder='name' value={this.state.formName} />
@@ -133,11 +133,34 @@ class Contact extends Component {
                                             <button onClick={this.submitForm} className='submit-button hvr-fade'>Submit</button>
                                         
                                     </div>
+                                    {/* fun about section */}
                                     <div id='about'>
+                                    <h3>About Us</h3>
+                                    <p>Firm History:</p>
+                                    <p> 
+                                    Since 2007, Securities Industry Records Services, LLC ("SIRS") has been a premier provider of low-cost, regulatory compliance services for financial institutions. Specializing in AML compliance services, SIRS has developed training, independent testing, and compliance programs for various non-bank financial institutions.
+                                    </p>
+                                    <br/>
+                                    <p>
+                                    The Partner Approach to AML compliance:
+                                    </p>
+                                    <p>
+                                    The regulatory requirements placed on financial institutions can be onerous. Recognizing that financial institutions are often burdened by these demands, SIRS acts as an institution’s AML compliance partner to help lighten this load.   
+                                    </p>
+                                    <br/>
+                                    <p>
+                                    When conducting the independent test of your program, SIRS will act as your partner. If deficiencies are found, SIRS will work with you to address and resolve those deficiencies, if possible, before the test is completed. In this way, your test report can present your program in the best possible light.    
+                                    </p>
+                                    <br/>
+                                    <p>
+                                    Similarly, as changes to your policies or procedures are needed, SIRS will work with you to help make these changes.
+                                    </p>
+
+                                    <img src={kevbeck} height='300px' alt='kevin and becky'/>
 
 
-                                    
                                     </div>
+                                    {/* ===================== */}
                                     </div>
                                     <br/>
                                     <div id='border-bottom'/>

@@ -20,11 +20,14 @@
     flex-direction: column;
     
 }
+#mid{
+    padding: 0 24px;
+}
 .quote-container{
-    margin: 24px;
+    margin: 24px 0;
     padding: 24px;
     box-shadow: 1px 1px 1px gray;
-    background-color: gainsboro;
+    background-color: #dcdcdc6b;
 }
 #bottom-bar{
     margin-top: 24px;

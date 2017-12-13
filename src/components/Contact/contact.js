@@ -144,7 +144,29 @@ We'd love to hear from you!                                        </p>
                                             <textarea onChange={this.messageInput} id='message-input' placeholder='your message' value={this.state.formMessage} />
                                             <br/>
                                             <button onClick={this.submitForm} className='submit-button hvr-fade'>Submit</button>
-                                        
+                                            <br/> <br/>
+                                        <div id='border-bottom'>
+                                        <br/>
+                                        <h3>
+                                        Contact Us
+                                    </h3>
+                                    <br/>
+                                    <div id='contact-info'>
+                                    <h4>
+                                        Regular Mail: 
+                                    </h4>
+                                    <p>SIRS</p>
+                                    <p>1420 W 8700 South</p>
+                                    <p> West Jordan, UT 84088</p>
+                                    <br/>
+                                    <h4>Email</h4>
+                                    <p><a href='mailto:info@Sirsco.com'>info@Sirsco.com</a></p>
+                                    <br/>
+                                    <h4>Telephone: </h4>
+                                    <p>801.931.3320</p>
+                                    <br/>
+                                    </div>
+                                        </div>
                                     </div>
                                     {/* fun about section */}
                                     <div id='about'>
@@ -206,25 +228,7 @@ We'd love to hear from you!                                        </p>
                                     <div id='border-bottom'/>
                                     
 
-                                    <h3>
-                                        Contact Us
-                                    </h3>
-                                    <br/>
-                                    <div id='contact-info'>
-                                    <h4>
-                                        Regular Mail: 
-                                    </h4>
-                                    <p>SIRS</p>
-                                    <p>1420 W 8700 South</p>
-                                    <p> West Jordan, UT 84088</p>
-                                    <br/>
-                                    <h4>Email</h4>
-                                    <p><a href='mailto:info@Sirsco.com'>info@Sirsco.com</a></p>
-                                    <br/>
-                                    <h4>Telephone: </h4>
-                                    <p>801.931.3320</p>
-                                    <br/>
-                                    </div>
+                                    
                                                                         <br/>
                                     </div>
                                     

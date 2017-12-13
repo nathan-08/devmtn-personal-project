@@ -40,8 +40,16 @@ export default class DialogPlus extends React.Component {
             onClick={this.props.toggleFlag}
         >CANCEL</button>
         ]
+        const deleteActions = [
+            <button className='submit-button hvr-fade'
+                label='CANCEL'
+                onClick={this.props.toggleFlag}>CANCEL</button>,
+            <button className='submit-button hvr-fade'
+                label='CONFIRM'
+                onClick={this.props.deleteThis}>CONFIRM</button>
+        ]
 
-        if (true)
+        if (typeof this.props.currentMessageIndex === 'number')
         {return ( 
             <Dialog actions={actions}
             open={this.props.open}
@@ -51,10 +59,10 @@ export default class DialogPlus extends React.Component {
             <TextField value={this.state.newQuote.citation} onChange={this.updateQuoteCitation} floatingLabelText='citation' floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                         underlineFocusStyle={styles.underlineStyle} fullWidth={true}/>
             </Dialog>
-        )} else {
+        )} else if (this.props.currentMessageIndex.includes('DELETE')){
         return (
-            <Dialog actions={actions} open={this.props.open} onRequestClose={this.props.toggleFlag}>
-            <TextField/> 
+            <Dialog actions={ deleteActions } open={this.props.open} onRequestClose={this.props.deleteThis}>
+            Really Delete?  
             </Dialog>
         )
         }

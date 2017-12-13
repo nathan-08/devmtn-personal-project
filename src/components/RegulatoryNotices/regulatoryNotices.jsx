@@ -1,9 +1,35 @@
 import React from 'react'
 import seal from './../../img/CAMS_SEAL.gif'
 import nyc from './../../img/NYSE5.jpg'
+import nyse1 from './../../img/NYSE4.jpg'
+import nyse2 from './../../img/nyse.jpg'
 import './../../css/home.css'
+import {connect} from 'react-redux'
 
-export default () => (
+class regulatoryNotices extends React.Component{ 
+    constructor(props){
+        super(props)
+        this.state={
+            currentQuoteIndex: null,
+            imgIndex: null
+        }
+    }
+
+componentWillMount(){
+    //select random quotes to display
+    const imgArray = [nyc, nyse1, nyse2]
+    let randomNum= Math.floor(Math.random() * this.props.quotes.length)
+    let img=imgArray[Math.floor(Math.random() * 3)]
+    this.setState({
+        currentQuoteIndex: randomNum,
+        imgIndex: img
+    })
+}
+render(){
+    console.log('this.state.currentQuoteIndex: ', this.state.currentQuoteIndex)
+    console.log('this.props.quotes.length', this.props.quotes.length)
+    //this.props.quotes[]{}
+return(
     <div className='left-side-panel regulatory-notices'>
     <img src={seal} alt='seal' id='seal'/>
     <br/>
@@ -31,13 +57,20 @@ export default () => (
     In this December 2015 Press Release, FinCEN announced the assessment of a $200,000 civil money penalty against a Los Angeles precious metals business.
     </p>
     <br/>
-    <img src={nyc} alt='nyc' id='nyc-img'/>
+    <img src={this.state.imgIndex} alt='nyc' id='nyc-img'/>
     <br/>
     <p>
-    "To preserve our independence, we must not let our rulers load us with perpetual profusion and servitude."
+    {this.props.quotes[0] ? this.props.quotes[this.state.currentQuoteIndex].body : null}
     </p>
     <br/>
-    <p className='quoted'> ~Thomas Jefferson
+    <p className='quoted'> ~{this.props.quotes[0] ? this.props.quotes[this.state.currentQuoteIndex].citation : null}
     </p>
     </div>
-);
+)
+}
+}
+
+function mapStateToProps(state){
+    return state
+}
+export default connect(mapStateToProps)(regulatoryNotices)

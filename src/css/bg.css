@@ -92,11 +92,15 @@
     .logo{
         background-size: 400px;  
     }
+    .home--body{
+        flex-direction: column-reverse;
+    }
     .regulatory-notices{
-        display:none;
+        width:100%
     }
     .text-body{
         width: 100%;
+        margin-bottom: 12px;
     }
     .bg200{
         height:120px;  

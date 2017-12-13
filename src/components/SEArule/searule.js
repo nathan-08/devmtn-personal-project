@@ -116,14 +116,14 @@ export default class SEArule extends Component{
             In recent years, reputable technology providers, including Amazon and Microsoft, have developed 17a-4-compliant archiving services. Amazon’s Glacier with Vault Lock and Microsoft’s 
             Office 365 with Preservation Lock allow a B/D to preserve records in a manner that complies with the requirements of Rule 17a-4.
             </p>
-            <ul>
-                <li>
+            <br/>
+                
 <h4>Amazon Glacier Receives Third-Party Assessment for SEC Rule 17a-4(f) from Cohasset Associates</h4>
-                </li>
-                <li>
+                
+                
 <h4>Office 365 Archiving Now Meets SEC Rule 17a-4 Requirements</h4>
-                </li>
-            </ul>
+                
+            
             <br/>
             <h4>Third-party Access (“TPA” or "D3P")</h4>
             <p>17a-4(f)(3)(vii) requires a B/D to engage the services of “at least one third party…, 

@@ -21,6 +21,8 @@ class Admin extends React.Component{
         this.updateQuotesArrayBody = this.updateQuotesArrayBody.bind(this)
         this.updateSingleQuote = this.updateSingleQuote.bind(this)
         this.sendChangesToDB = this.sendChangesToDB.bind(this)
+        this.deleteThis = this.deleteThis.bind(this)
+        this.toggleDialogAndDelete = this.toggleDialogAndDelete.bind(this)
     }
     updateFields(){
         // this function will set state 
@@ -28,9 +30,20 @@ class Admin extends React.Component{
     }
     getQuotesFromServer(){
         // this function will get quotes array from server and store it to local state
-        this.props.getQuotes()
+        this.props.getQuotes().then(()=>{
         this.setState({
             quotesArray: this.props.quotes
+        })
+    })
+    }
+    deleteThis(){
+        //toggle flag and remove this.props.currentMessage from quotesArray
+        // this.props.quotesArray.splice(this.props.currentMessage, 1)
+        let quotes = this.state.quotesArray
+        quotes.splice(this.state.currentMessageIndex[0], 1)
+        this.setState({
+            dialogFlag: !this.state.dialogFlag,
+            quotesArray: quotes
         })
     }
     updateSingleQuote(quoteObj){
@@ -50,7 +63,7 @@ class Admin extends React.Component{
     }
     sendChangesToDB(){
             // this functio will upload this.state.quotesArray to the DB 
-            axios.put('/quotes/update', this.state.quotesArray)
+            axios.put('/quotes/update', this.state.quotesArray).then(()=>this.props.getQuotes())
             
     }
     toggleDialogFlag(){
@@ -62,6 +75,12 @@ class Admin extends React.Component{
         this.setState({
             dialogFlag: !this.state.dialogFlag,
             currentMessageIndex: i
+        })
+    }
+    toggleDialogAndDelete(i){
+        this.setState({
+            dialogFlag: !this.state.dialogFlag,
+            currentMessageIndex: i + '_DELETE'
         })
     }
     componentWillMount(){
@@ -78,8 +97,8 @@ class Admin extends React.Component{
             <div id='admin-component'>
             <section id='top'>
             <div id='user-info'>
-            <img src={this.props.userData.picture} alt='user profile pic' id='user-img'/>            
-            <h3>Welcome, {this.props.userData.namefirst || 'friend'}</h3>         
+            <img src={this.props.userData.img} alt='user profile pic' id='user-img'/>            
+            <h3>Welcome, {this.props.userData.user_name || 'friend'}</h3>         
             </div>            
             </section>
             <section id='mid'>
@@ -94,25 +113,30 @@ class Admin extends React.Component{
             { 
             this.state.quotesArray.map((e,i)=>(
             <div key={i} className='quote-container'>
-                <button onClick={()=>this.toggleDialogFlagWithMessage(i)}>edit sum stuff</button>
-                <button>delet this</button>
+                
+                
                 <div>{e.body}</div>
+                <br/>
                 <div>{e.citation}</div>
+                <br/>
                 <div>{e.cite_link}</div>
+                
+                <button className='submit-button hvr-fade' onClick={()=>this.toggleDialogFlagWithMessage(i)}>EDIT</button>                
+                <button className='submit-button hvr-fade' onClick={()=>this.toggleDialogAndDelete(i)}>DELETE</button>
             </div>
             ))
             }
                 
 
-
+                <div id='bottom-bar'>
+            <a href='http://localhost:3005/auth/logout'><button className='submit-button hvr-fade'>LOGOUT</button></a>
+            </div>
 
             </section>
             
             
             
-            <div id='bottom-bar'>
-            <a href='http://localhost:3005/auth/logout'><button className='submit-button hvr-fade'>LOGOUT</button></a>
-            </div>
+            
             </div>
             
             
@@ -121,7 +145,7 @@ class Admin extends React.Component{
                                         open={this.state.dialogFlag} message={this.state.dialogMessage}
                                         quotesArray={this.state.quotesArray} currentMessageIndex={this.state.currentMessageIndex}
                                         updateQuotesArrayBody={this.updateQuotesArrayBody}
-                                        updateSingleQuote={this.updateSingleQuote}/>}
+                                        updateSingleQuote={this.updateSingleQuote} deleteThis={this.deleteThis}/>}
             </div>
         )
     }

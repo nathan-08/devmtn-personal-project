@@ -31,16 +31,17 @@ passport.use(new Auth0Strategy({
     clientID: process.env.AUTH_CLIENT_ID,
     clientSecret: process.env.AUTH_CLIENT_SECRET,
     callbackURL: process.env.AUTH_CALLBACK
-}, (accesToken, refreshToken, extraParams, profile, done) =>{
+}, (accessToken, refreshToken, extraParams, profile, done) =>{
     /*what to request from social media site*/
     const db = app.get('db')
     let userData = profile._json
         , auth_id = userData.user_id.split('|')[1]
+    console.log('profile._json: ', profile._json)
     db.find_user([auth_id]).then(user => {
         if (user[0]) {
             return done(null, user[0].id)
         } else {
-            db.create_user([userData.name, userData.email, userData.picture, auth_id])
+            db.create_user([userData.given_name, userData.email, userData.picture, auth_id])
             .then( user=> done(null, user[0].id))
         }
     })
@@ -91,6 +92,12 @@ app.get('/quotes', (req,res)=>{
 app.put('/quotes/update', (req,res)=>{
     const db = app.get('db')
     console.log('req.body: ',req.body)
+    const quotesArray = req.body;
+    db.delete_all_quotes().then(()=>{
+        for(let i = 0; i < quotesArray.length; i++){
+            db.add_quote(quotesArray[i].body, quotesArray[i].citation, quotesArray[i].cite_link)
+        }
+    })
 })
 
 /***nodemailer ********************************************************/

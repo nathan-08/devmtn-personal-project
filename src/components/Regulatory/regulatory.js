@@ -63,7 +63,7 @@ export default class Regulatory extends Component{
             <ViewBox bgColor={colors[4]} width={styles[4].width}>
               <ViewBody>
             <div className='Regulatory Component'>
-            <div className='bg200 regulatorybg'>
+            <div className='bg200 regulatorybg'>REGULATORY REFERENCES
             </div>
             
             <div className='home--body'>

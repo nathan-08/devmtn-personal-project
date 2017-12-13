@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import './../../css/contact.css'
 import './../../css/button.css'
 import axios from 'axios'
-import { getUser } from './../../ducks/reducer';
 import { connect } from 'react-redux';
 import kevbeck from './../../img/kevbeck.jpg'
+import ceo from './../../img/sirsceo.jpg'
+import DialogBox from './../dialog'
 
 const colors = [
     '#def5b9',
@@ -46,12 +47,23 @@ class Contact extends Component {
         this.state={
             formName: '',
             formEmail: '',
-            formMessage: ''
+            formMessage: '',
+            dialogFlag: false,
+            alertSentMessage: false,
+            dialogMessage: ''
         }
     this.nameInput = this.nameInput.bind(this)
     this.emailInput = this.emailInput.bind(this)
     this.messageInput = this.messageInput.bind(this)
     this.submitForm = this.submitForm.bind(this)
+    this.toggleDialogFlag = this.toggleDialogFlag.bind(this)
+    this.toggleSentMessage = this.toggleSentMessage.bind(this)
+    }
+    toggleDialogFlag(){
+        this.setState({dialogFlag: !this.state.dialogFlag})
+    }
+    toggleSentMessage(){
+        this.setState({alertSentMessage: !this.state.alertSentMessage})
     }
     nameInput(e){
         this.setState({
@@ -71,24 +83,25 @@ class Contact extends Component {
     submitForm(){
         if (this.state.formName && this.state.formEmail && this.state.formMessage){
             /**make axios call */
-        axios.post('http://localhost:3005/contactus', { name: this.state.formName, email: this.state.formEmail, message: this.state.formMessage })
-             .then( result => {
-                 this.setState({
-                     formName: '',
-                     formEmail: '',
-                     formMessage: '',
-                     isLoggedIn: false
-                 })
-                 alert('Message sent.')
-             })
+            this.setState({
+                formName: '',
+                formEmail: '',
+                formMessage: '',
+                isLoggedIn: false,
+                alertSentMessage: true,
+                dialogMessage: 'messsage sent',
+                dialogFlag: true                    
+               })
+        axios.post('/contactus', { name: this.state.formName, email: this.state.formEmail, message: this.state.formMessage })             
         } else {
             /**if missing required fields */
-            alert('Please enter a name, email and message.')
+            this.setState({
+                dialogFlag: true,
+                dialogMessage: 'please fill in all fields'
+            })
         }
     }
-    componentDidMount(){
-        this.props.getUser();
-    }
+    
     render() {
         return (
             <StaggeredMotion
@@ -116,7 +129,7 @@ class Contact extends Component {
                             <ViewBody>
 
                                 <div className='Contact Component'>
-                                    <div className='contactbg bg200'></div>
+                                    <div className='contactbg bg200'> ABOUT US</div>
                                     <div id='contact-about-container'>
                                     <div className='contact-container'>
                                         <div id='explanation'>
@@ -155,26 +168,70 @@ We'd love to hear from you!                                        </p>
                                     <p>
                                     Similarly, as changes to your policies or procedures are needed, SIRS will work with you to help make these changes.
                                     </p>
+                                    <br/>
+                                    <h4>
+                                        Discounted Pricing through Electronic Delivery:
+                                    </h4>
+                                    <p>
+                                    Through the use of SIRS' secure cloud server, financial institutions are able to provide their AML program documents electronically to SIRS. SIRS is then able to access these files in order to conduct the required test of the institution's AML program. Phone and email communications with firm management allow SIRS personnel to easily address any issues that may arise as we work through the testing process. This use of modern communication and information sharing technologies eliminates travel time and costs and allows SIRS to perform its review in a highly efficient and cost-effective manner.
+                                    </p>
+                                    <br/>
+                                    <h4>
+                                        Executive Management:
+                                    </h4>
 
-                                    <img src={kevbeck} height='300px' alt='kevin and becky'/>
+                                    <img src={ceo} height='300px' alt='SIRS CEO' id='ceo-img'/>
+                                    <p>
+                                        Kevin A. Klundt, CAMS, Founder and CEO of Securities Industry Records Services, LLC.
+
+                                    </p>
+                                    <p>
+                                        Phone: 801.613.5388
+                                    </p>
+                                    <p>
+                                        Email: <a href='mailto:kevin.klundt@sirsco.com'>kevin.klundt@Sirsco.com</a>
+                                    </p>
+                                    <br/>
+                                    <p>
+                                    Since 1993, Mr. Klundt has been actively involved in the financial services industry. During this time, he has been registered with the New York Stock Exchange as an NYSE Compliance Official. He has also held the positions of Chief Compliance Officer and AML Compliance Officer with a FINRA-registered broker/dealer.
+
+                                    </p>
+                                    <br/>
+                                    <p>
+                                    Mr. Klundt is a Certified Anti-Money Laundering Specialist® ("CAMS") and is a member of the Association of Certified Anti-Money Laundering Specialists ("ACAMS"). He has a Master of Arts degree from Duquesne University (Pittsburgh, PA) and a Bachelor of Science degree from Brigham Young University (Provo, UT). He has passed multiple certification examinations and has participated in numerous industry-sponsored regulatory compliance and AML training programs.
 
 
-                                    </div>
-                                    {/* ===================== */}
-                                    </div>
+                                    </p>
                                     <br/>
                                     <div id='border-bottom'/>
                                     
-                                    <section id='admin'>
-                                            <a href={process.env.REACT_APP_LOGIN}><button className='submit-button hvr-fade'>LOGIN</button></a>
-                                            <a href='http://localhost:3005/auth/logout'><button className='submit-button hvr-fade'>LOGOUT</button></a>
 
-                                            <div id='user_display' style={{'display': this.props.user.namefirst ? "block" : "none"}}>
-                                            welcome, {this.props.user.namefirst}
-                                            <img src={this.props.user.picture} alt='profile pic'/>
-                                            </div>
-                                    </section>                                
-
+                                    <h3>
+                                        Contact Us
+                                    </h3>
+                                    <br/>
+                                    <div id='contact-info'>
+                                    <h4>
+                                        Regular Mail: 
+                                    </h4>
+                                    <p>SIRS</p>
+                                    <p>1420 W 8700 South</p>
+                                    <p> West Jordan, UT 84088</p>
+                                    <br/>
+                                    <h4>Email</h4>
+                                    <p><a href='mailto:info@Sirsco.com'>info@Sirsco.com</a></p>
+                                    <br/>
+                                    <h4>Telephone: </h4>
+                                    <p>801.931.3320</p>
+                                    <br/>
+                                    </div>
+                                                                        <br/>
+                                    </div>
+                                    
+                                    {/* ===================== */}
+                                    {this.state.dialogFlag && <DialogBox toggleFlag={this.toggleDialogFlag} open={this.state.dialogFlag} message={this.state.dialogMessage}/>}
+                                    </div>
+                                    
                                 </div>
                             </ViewBody>
                         </ViewBox>
@@ -185,6 +242,6 @@ We'd love to hear from you!                                        </p>
     }
 }
 function mapStateToProps(state) {
-    return { user: state.userData }
+    return state
 }
-export default connect(mapStateToProps, { getUser })(Contact)
+export default connect(mapStateToProps)(Contact)

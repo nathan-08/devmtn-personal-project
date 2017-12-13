@@ -63,7 +63,7 @@ export default class SEArule extends Component{
             <ViewBox bgColor={colors[4]} width={styles[4].width}>
               <ViewBody>
             <div className='SEArule Component'>
-            <div className='searulebg bg200'></div>
+            <div className='searulebg bg200'>SEA RULE</div>
 
             <div className='home--body'>
             <RegulatoryNotices/>

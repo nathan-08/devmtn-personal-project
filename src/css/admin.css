@@ -1,0 +1,31 @@
+#admin{
+    margin: 24px;
+    box-shadow: 1px 1px 4px gray;
+    padding: 12px;
+}
+#user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+#user-img{
+    border-radius: 50%;
+    height: 100px;
+}
+#top{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+}
+.quote-container{
+    margin: 24px;
+    padding: 24px;
+    box-shadow: 1px 1px 1px gray;
+    background-color: gainsboro;
+}
+#bottom-bar{
+    margin-top: 24px;
+}

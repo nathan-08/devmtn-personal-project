@@ -1,25 +1,51 @@
+/****text inside**/
+.bg200{
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px rgb(10, 84, 150);
+    background-repeat: no-repeat;
+    letter-spacing: .08em;
+}
+.bg200::after{
+    content:'';
+    background: white;
+    width:180px;
+    height: 4px;
+    margin: 18px auto;
+    box-shadow: 1px 1px 1px rgb(10, 84, 150);
+
+}
+/*****/
+
 .bg200{    
     height: 300px;    
     width: 100%;
     background-attachment: fixed;
     background-position: center 40px;
     background-size: auto;
+    border-bottom:1px solid #74b01b;
     /* background-repeat: no-repeat; */
 } 
 .homebg{ /*home.js*/
-    background-image: url('./../img/business-meeting1920x420.jpg');
+    background-image: url('./../img/business-meeting1920x420color.jpg');
 }
 .pricingbg{ /*pricing.js*/
-    background-image: url('./../img/regulatory1920x420.jpg');
+    background-image: url('./../img/regulatory1920x420color.jpg');
 }
 .regulatorybg{ /*regulatory.js*/
-    background-image: url('./../img/desk1920x420.png');
+    background-image: url('./../img/desk1920x420color.png');
 }
 .searulebg{ /*sea.js*/
-    background-image: url('./../img/capitol1920x420.jpg');      
+    background-image: url('./../img/capitol1920x420color.jpg');      
 }
 .contactbg{ /*contact.js*/
-    background-image: url('./../img/letter1920x420.jpg');
+    background-image: url('./../img/letter1920x420color.jpg');
 }
 /***small screens */
     /* .pricingbg{
@@ -42,21 +68,22 @@
         height:180px;  
         background-attachment: fixed;
         background-position: center 40px;   
+        font-size:38px;
     }
     .homebg{
-        background-image: url('./../img/home800x300.jpg');
+        background-image: url('./../img/home800x300color.jpg');
     }
     .pricingbg{
-        background-image: url('./../img/pricing800x300.jpg')
+        background-image: url('./../img/pricing800x300color.jpg')
     }
     .regulatorybg{
-        background-image: url('./../img/desk800x300.png')
+        background-image: url('./../img/desk800x300color.png')
     }
     .searulebg{
-        background-image: url('./../img/capitol800x300.jpg')
+        background-image: url('./../img/capitol800x300color.jpg')
     }
     .contactbg{
-        background-image: url('./../img/letter800x300.jpg')
+        background-image: url('./../img/letter800x300color.jpg')
     }
 }
 
@@ -75,21 +102,26 @@
         height:120px;  
         background-attachment: fixed;
         background-position: center 40px;   
+        font-size: 28px;
+    }
+    .bg200::after{
+        width:100px;
+        margin: 12px auto;
     }
     .homebg{
-        background-image: url('./../img/home500x200.jpg');
+        background-image: url('./../img/home500x200color.jpg');
     }
     .pricingbg{
-        background-image: url('./../img/regulatory500x200.jpg')
+        background-image: url('./../img/regulatory500x200color.jpg')
     }
     .regulatorybg{
-        background-image: url('./../img/desk500x200.png')
+        background-image: url('./../img/desk500x200color.png')
     }
     .searulebg{
-        background-image: url('./../img/capitol500x200.jpg')
+        background-image: url('./../img/capitol500x200color.jpg')
     }
     .contactbg{
-        background-image: url('./../img/letter500x200.jpg')
+        background-image: url('./../img/letter500x200color.jpg')
     }
 
 
@@ -166,12 +198,12 @@
         /* background-size: contain; */
     }    
     .homebg{
-        background-image: url('./../img/business-meeting1920x420.jpg');
+        background-image: url('./../img/business-meeting1920x420color.jpg');
     }
     .pricingbg{
-        background-image: url('./../img/regulatory1920x420.jpg');
+        background-image: url('./../img/regulatory1920x420color.jpg');
     }
     .regulatorybg{
-        background-image: url('./../img/desk1920x420.png');
+        background-image: url('./../img/desk1920x420color.png');
     }
 }

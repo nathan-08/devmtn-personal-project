@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 /*font-family: 'Open Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+/*font-family: 'Roboto', sans-serif;*/
 
 .App{
     display: block;
     min-height: 100vh;
     width: 100vw;
-    background-color: lightcyan;
-    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(238, 238, 238);
+    font-family: 'Roboto', sans-serif;
     font-size:15px;
 }
 .navbar-thin{
@@ -65,8 +67,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 Applies to all Components
 */
 .Component{
-    width:100%;
-    min-height: calc(100% - 440px);
+    /* width:100%; */
+    min-height: calc(100vh - 440px);
     background-color: white;
 }
 
@@ -76,8 +78,10 @@ Applies to all Components
     background-color: rgba(116,176,27,1);  /*74b01b*/
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    
     
 }
 #cams-seal{
@@ -92,14 +96,15 @@ Applies to all Components
 h3 {
     letter-spacing: 1.8px;
     line-height: 1.2;
-    font-family: 'Open Sans', sans-serif;
-    font-size:1.1em;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.2em;
     text-align: center;
+    font-weight: 400;
 }
 p {
     letter-spacing: .05em;
     line-height: 1.2;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:.9em;
 
 }
@@ -118,7 +123,9 @@ li {
     
 }
 h4{
-    color:blue;
+    color:#183395;
+    font-size:1.1em;
+    margin-bottom: 8px;
 }
 li {
     list-style-type: disc;
@@ -131,31 +138,41 @@ li p, li h4{
 text body formatting
 *****/
 .home--body{
+    padding: 24px;
     display: flex;
     width: 100vw;
+    background-color: rgb(238, 238, 238);
 }
 
 .text-body{
-    margin: 0 4% 0 2%;
     width: 80%;
     padding-top: 12px;
+    padding: 22px;
+    background-color: white;
+    box-shadow: 1px 1px 5px gray;
 }
 .left-side-panel{
     padding: 12px;
+    margin-right: 24px;
     width: 20%;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    box-shadow: 1px 1px 5px gray;
 }
 .h3{
     text-align: right;
     padding: 0 4% 0 0;
 }
+
 .p{
     text-align: left;
     padding: 0 20% 0 4%;
+}
+a{
+    color: #74b01b;
 }
 .quoted{
     text-align: right;
@@ -164,10 +181,7 @@ text body formatting
 #nyc-img{
     max-width: 100%;
 }
-.text-body{
-    margin: 0 4% 0 2%;
-    width: 80%;
-}
+
 #seal{
     margin: 0 auto;
     max-width: 100%;

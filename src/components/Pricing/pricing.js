@@ -64,7 +64,7 @@ export default class Pricing extends Component {
                         <ViewBox bgColor={colors[4]} width={styles[4].width}>
                             <ViewBody>
                                 <div className='Pricing Component'>
-                                    <div className='pricingbg bg200'></div>
+                                    <div className='pricingbg bg200'>PRICING AND ENROLLMENT</div>
                                     <div className='home--body'>
                                     <RegulatoryNotices/>
                                     <div className='text-body'>

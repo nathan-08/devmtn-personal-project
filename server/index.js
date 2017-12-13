@@ -49,9 +49,10 @@ passport.use(new Auth0Strategy({
 
 
 /**ENDPOINTS */
+
 app.get('/auth', passport.authenticate('auth0'))
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/contact',
+    successRedirect: 'http://localhost:3000/#/admin',
     failureRedirect: 'http://localhost:3000/#/'
 }))
 
@@ -79,6 +80,18 @@ app.get('/auth/logout', (req,res,next)=>{
     req.logout()
     res.redirect('http://localhost:3000/#/')
 })
+// get quotes
+app.get('/quotes', (req,res)=>{
+    const db = app.get('db')
+    db.get_quotes().then(quotes=>{
+        res.status(200).send(quotes)
+    })
+})
+// update quotes
+app.put('/quotes/update', (req,res)=>{
+    const db = app.get('db')
+    console.log('req.body: ',req.body)
+})
 
 /***nodemailer ********************************************************/
 app.post('/contactus',  function create(req, res) {
@@ -105,7 +118,7 @@ app.post('/contactus',  function create(req, res) {
         // setup email data with unicode symbols
         let mailOptions = {
             from: `${req.body.name} 👻 <${req.body.email}>`, // sender address
-            to: "kevin.klundt@gmail.com, nathanryan001@gmail.com", // list of receivers
+            to: "nathanryan001@gmail.com", // list of receivers
             subject: `New Customer Query from ${newMessage.name}`, // Subject line
             text: '', // plain text body
             html: `<h1>${newMessage.name} wants to know more about SirsCo!</h1></br>
@@ -128,5 +141,5 @@ app.post('/contactus',  function create(req, res) {
 /**===================== */
 
 /*           \ ^ - ^ /                    */
-app.listen(process.env.SERVER_PORT, ()=> console.log('listening o _ o ') )
+app.listen(process.env.SERVER_PORT, ()=> console.log('listening o _ o port: '+process.env.SERVER_PORT) )
 /*                                        */

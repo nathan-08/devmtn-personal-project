@@ -5,6 +5,7 @@ import SEArule from '../components/SEArule/searule.js'
 import Pricing from '../components/Pricing/pricing.js'
 import Contact from '../components/Contact/contact.js'
 import Regulatory from '../components/Regulatory/regulatory.js'
+import Admin from '../components/Admin/admin.js'
 
 export default  (
         <Switch>
@@ -13,5 +14,6 @@ export default  (
             <Route path='/contact' component={Contact}/>
             <Route path='/searule' component={SEArule} />
             <Route path='/regulatory' component={Regulatory}/>
+            <Route path='/admin' component={Admin}/>
         </Switch>    
 )

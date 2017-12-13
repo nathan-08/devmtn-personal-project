@@ -9,7 +9,7 @@ const colors = [
     '#def5b9',
     '#c6f876',
     '#87ca22',
-    '#87ca22',
+    '#82c224',
     '#74b01b'
 ]
 
@@ -78,7 +78,7 @@ export default class Home extends Component {
                             <ViewBody>
                                 <div className='Home Component' >
                                     <section className='home-first-section'>
-                                        <div className='bg200 homebg'>
+                                        <div className='bg200 homebg'>SIRS AML COMPLIANCE
                                         </div>
 
                                     </section>

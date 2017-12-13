@@ -1,0 +1,1 @@
+create table quotes (id serial primary key, body text, citation text, cite_link text);

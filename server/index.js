@@ -21,7 +21,7 @@ app.use(session({
     saveUninitialized: true,
     secret: process.env.SESSION_SECRET
 }))
-//app.use(express.static(__dirname+ '/../build'))
+app.use(express.static(__dirname+ '/../build'))
 
 app.use(passport.initialize())
 app.use(passport.session())
@@ -36,7 +36,7 @@ passport.use(new Auth0Strategy({
     const db = app.get('db')
     let userData = profile._json
         , auth_id = userData.user_id.split('|')[1]
-    console.log('profile._json: ', profile._json)
+    // console.log('profile._json: ', profile._json)
     db.find_user([auth_id]).then(user => {
         if (user[0]) {
             return done(null, user[0].id)
@@ -53,8 +53,8 @@ passport.use(new Auth0Strategy({
 
 app.get('/auth', passport.authenticate('auth0'))
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/admin',
-    failureRedirect: 'http://localhost:3000/#/'
+    successRedirect: FRONT_END_AUTH_SUCCESS,
+    failureRedirect: FRONT_END_AUTH_FAILURE
 }))
 
 passport.serializeUser((ID, done)=>{

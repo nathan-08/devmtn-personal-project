@@ -30,7 +30,7 @@
     "eject": "react-scripts eject"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "index.js",
+  "main": "server/index.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
@@ -42,6 +42,6 @@
   "bugs": {
     "url": "https://github.com/nathan-08/sirs-clone-2/issues"
   },
-  "homepage": "https://github.com/nathan-08/sirs-clone-2#readme",
+  
   "proxy": "http://localhost:3005"
 }

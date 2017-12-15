@@ -91,7 +91,6 @@ app.get('/quotes', (req,res)=>{
 // update quotes
 app.put('/quotes/update', (req,res)=>{
     const db = app.get('db')
-    console.log('req.body: ',req.body)
     const quotesArray = req.body;
     db.delete_all_quotes().then(()=>{
         for(let i = 0; i < quotesArray.length; i++){
@@ -99,14 +98,31 @@ app.put('/quotes/update', (req,res)=>{
         }
     })
 })
-
+// get messages
+app.get('/nodemailer', (req, res)=>{
+    const db = app.get('db')
+    db.get_messages().then(messages=>{
+        res.status(200).send(messages)
+    })
+})
+// update messages
+app.post('/nodemailer', (req, res)=>{
+    const db = app.get('db')
+    db.delete_all_messages().then(()=>{
+    for(let i = 0; i < req.body.length; i++){
+        db.add_message(req.body.name, req.body.email, req.body.message)
+    }
+    })
+})
 /***nodemailer ********************************************************/
 app.post('/contactus',  function create(req, res) {
+    const db = app.get('db')
     const newMessage = {
         name: req.body.name,
         email: req.body.email,
         message: req.body.message
     }
+    db.add_message(newMessage.name, newMessage.email, newMessage.message)
     console.log('newMessage: ',newMessage);
     // node mailer code
     // Generate test SMTP service account from ethereal.email
@@ -142,7 +158,6 @@ app.post('/contactus',  function create(req, res) {
             res.sendStatus(200);
         });
     });
-
 });
 /****************** */
 /**===================== */

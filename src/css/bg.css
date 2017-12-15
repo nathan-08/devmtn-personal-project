@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     color: rgb(255, 255, 255);
-    font-size: 48px;
+    font-size: 42px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@
     content:'';
     background: white;
     width:180px;
-    height: 4px;
+    height: 3px;
     margin: 18px auto;
     box-shadow: 1px 1px 1px rgb(10, 84, 150);
 
@@ -68,7 +68,7 @@
         height:180px;  
         background-attachment: fixed;
         background-position: center 40px;   
-        font-size:38px;
+        font-size:32px;
     }
     .homebg{
         background-image: url('./../img/home800x300color.jpg');

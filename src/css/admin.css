@@ -6,8 +6,10 @@
 #user-info{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
+    margin-top: 24px;
+    margin-right: 24px;
     
 }
 #user-img{
@@ -22,6 +24,7 @@
 }
 #mid{
     padding: 0 24px;
+    display: flex;
 }
 .quote-container{
     margin: 24px 0;
@@ -31,4 +34,11 @@
 }
 #bottom-bar{
     margin-top: 24px;
+}
+#admin-content{
+    display: flex;
+    flex-direction: column;
+}
+.admin-content-box{
+    margin: 24px 0;
 }

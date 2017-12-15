@@ -53,8 +53,8 @@ passport.use(new Auth0Strategy({
 
 app.get('/auth', passport.authenticate('auth0'))
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: FRONT_END_AUTH_SUCCESS,
-    failureRedirect: FRONT_END_AUTH_FAILURE
+    successRedirect: process.env.FRONT_END_AUTH_SUCCESS,
+    failureRedirect: process.env.FRONT_END_AUTH_FAILURE
 }))
 
 passport.serializeUser((ID, done)=>{

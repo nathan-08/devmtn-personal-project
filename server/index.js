@@ -112,7 +112,7 @@ app.post('/nodemailer', (req, res)=>{
     const db = app.get('db')
     db.delete_all_messages().then(()=>{
     for(let i = 0; i < req.body.length; i++){
-        db.add_message(req.body.name, req.body.email, req.body.message, 'kevin.klundt@sirsco.com')
+        db.add_message(req.body[i].name, req.body[i].email, req.body[i].message, 'kevin.klundt@sirsco.com')
     }
     })
 })

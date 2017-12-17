@@ -81,7 +81,7 @@ app.get('/auth/me', (req,res,next)=>{
 })
 app.get('/auth/logout', (req,res,next)=>{
     req.logout()
-    res.redirect('http://localhost:3000/#/')
+    res.redirect(process.env.FRONT_END_AUTH_FAILURE)
 })
 // get quotes
 app.get('/quotes', (req,res)=>{

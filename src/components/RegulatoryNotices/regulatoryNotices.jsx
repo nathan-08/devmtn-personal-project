@@ -26,9 +26,6 @@ componentWillMount(){
     })
 }
 render(){
-    console.log('this.state.currentQuoteIndex: ', this.state.currentQuoteIndex)
-    console.log('this.props.quotes.length', this.props.quotes.length)
-    //this.props.quotes[]{}
 return(
     <div className='left-side-panel regulatory-notices'>
     <img src={seal} alt='seal' id='seal'/>

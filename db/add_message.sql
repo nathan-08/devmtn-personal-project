@@ -1,2 +1,2 @@
-insert into nodemailer (name, email, message)
-values ($1, $2, $3);
+insert into nodemailer (name, email, message, admin_email)
+values ($1, $2, $3, $4);

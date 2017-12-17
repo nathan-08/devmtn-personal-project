@@ -58,7 +58,7 @@ app.get('/auth/callback', passport.authenticate('auth0', {
 }))
 
 passport.serializeUser((ID, done)=>{
-    console.log('serialized user')
+    console.log('serialized user, id:', ID)
     return done(null, ID)
 })
 
@@ -66,7 +66,9 @@ passport.deserializeUser((ID, done)=>{
     console.log('deserialized user')
     const db = app.get('db')
     db.find_user_by_session([ID]).then ( user=> {
-        return done(null, user)
+         console.log('user ', user)
+        return process.env.ADMIN_EMAILS.split(' ').includes(user[0].email) //admin email must be in .env        
+        ? done(null, user) : null 
     })
 })
 
@@ -110,7 +112,7 @@ app.post('/nodemailer', (req, res)=>{
     const db = app.get('db')
     db.delete_all_messages().then(()=>{
     for(let i = 0; i < req.body.length; i++){
-        db.add_message(req.body.name, req.body.email, req.body.message)
+        db.add_message(req.body.name, req.body.email, req.body.message, 'kevin.klundt@sirsco.com')
     }
     })
 })
@@ -122,7 +124,7 @@ app.post('/contactus',  function create(req, res) {
         email: req.body.email,
         message: req.body.message
     }
-    db.add_message(newMessage.name, newMessage.email, newMessage.message)
+    db.add_message(newMessage.name, newMessage.email, newMessage.message, 'kevin.klundt@sirsco.com')
     console.log('newMessage: ',newMessage);
     // node mailer code
     // Generate test SMTP service account from ethereal.email

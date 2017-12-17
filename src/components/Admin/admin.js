@@ -104,7 +104,6 @@ class Admin extends React.Component{
     componentWillMount(){
         this.getQuotesFromServer()
         axios.get('/nodemailer').then(messages=>{
-            console.log('got these messages: ',messages)
             this.setState({
                 messages: messages.data
             })
@@ -113,7 +112,7 @@ class Admin extends React.Component{
     
     render(){        
         const quotes = this.props.quotes
-        return(
+        return this.props.userData.id ? (
             <div id='admin' className='Component'>
             
             {this.props.userData ? 
@@ -200,6 +199,9 @@ class Admin extends React.Component{
                                         quotesArray={this.state.quotesArray} currentMessageIndex={this.state.currentMessageIndex}
                                         updateQuotesArrayBody={this.updateQuotesArrayBody}
                                         updateSingleQuote={this.updateSingleQuote} deleteThis={this.deleteThis}/>}
+            </div>
+        ) : (
+            <div className='Component'>unauthorized
             </div>
         )
     }

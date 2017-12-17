@@ -13,7 +13,6 @@ export function getQuotes(){
     return {
         type: GET_QUOTES,
         payload: axios.get('/quotes').then( quotes => {
-            console.log('quotesfrom redux, quotes.data: ',quotes.data)
             return quotes.data
         })
     }

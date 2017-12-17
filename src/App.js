@@ -46,7 +46,7 @@ class App extends Component {
         <div id='footer' >
         <p>Copyright © 2007 - 2017 Securities Industry Records Services, LLC. All Rights Reserved.</p>
 
-        {console.log('AAAAAAAA',this.props.userData)}
+        
         {this.props.userData.user_name ? <NavLink to='/admin'><p style={{color: 'black'}}>Admin page</p></NavLink> 
         : <a href={process.env.REACT_APP_LOGIN}><p style={{color: 'black'}}>Admin login</p></a>
         } 

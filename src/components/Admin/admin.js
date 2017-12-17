@@ -16,7 +16,7 @@ class Admin extends React.Component{
             messages: []
         }
         this.toggleDialogFlag = this.toggleDialogFlag.bind(this)
-        this.getQuotesFromServer = this.getQuotesFromServer.bind(this)
+        this.getDataFromServer = this.getDataFromServer.bind(this)
         this.updateFields = this.updateFields.bind(this)
         this.toggleDialogFlagWithMessage = this.toggleDialogFlagWithMessage.bind(this)
         this.updateQuotesArrayBody = this.updateQuotesArrayBody.bind(this)
@@ -30,11 +30,16 @@ class Admin extends React.Component{
         // this function will set state 
         return 0;
     }
-    getQuotesFromServer(){
+    getDataFromServer(){
         // this function will get quotes array from server and store it to local state
         this.props.getQuotes().then(()=>{
         this.setState({
             quotesArray: this.props.quotes
+        })
+    })
+    axios.get('/nodemailer').then(messages=>{
+        this.setState({
+            messages: messages.data
         })
     })
     }
@@ -102,12 +107,7 @@ class Admin extends React.Component{
         })
     }
     componentWillMount(){
-        this.getQuotesFromServer()
-        axios.get('/nodemailer').then(messages=>{
-            this.setState({
-                messages: messages.data
-            })
-        })
+        this.getDataFromServer()
     }
     
     render(){        
@@ -136,7 +136,7 @@ class Admin extends React.Component{
             <h3>Quotes</h3><p style={{textAlign:'center'}}>One of these quotes will be selected randomly at load and displayed at the bottom of the Regulatory Notices sidebar </p>
             <br/>
             <div id='border-bottom'/>
-            <button className='submit-button hvr-fade' onClick={this.getQuotesFromServer}>REFRESH</button>
+            <button className='submit-button hvr-fade' onClick={this.getDataFromServer}>REFRESH</button>
             <button className='submit-button hvr-fade' onClick={()=>this.toggleDialogFlagWithMessage(this.state.quotesArray.length)}>ADD</button>
             
             <br/>

@@ -130,7 +130,7 @@ class Contact extends Component {
 
                                 <div className='Contact Component'>
                                     <div className='contactbg bg200'> ABOUT US</div>
-                                    <div id='contact-about-container'>
+                                    <div id='contact-about-container' className='home--body'>
                                     <div className='contact-container'>
                                         <div id='explanation'>
                                         <p>

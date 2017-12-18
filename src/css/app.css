@@ -21,6 +21,7 @@
     border-bottom: 1px solid #74b01b;
     display: flex;
     justify-content: flex-end;
+    padding-right: 24px;
     
     
 }
@@ -190,8 +191,24 @@ a{
     max-width: 100%;
 }
 /****************************************/
-
+.hvr-underline-from-center{
+    font-size: 1em;
+    font-family: Roboto, sans-serif
+}
+.home--body{
+    padding: 24px 2% 24px 24px; /*because whitespace*/
+}
 @media(max-width:800px){
+    .navbar-thin{
+        padding: 0;
+    }
+    
+    .logo{
+        background-position: 0 0;
+    }
+    .home--body{
+        padding: 24px
+    }
     .left-side-panel{
         width:30%;
     }
@@ -200,5 +217,10 @@ a{
     }
 }
 @media(max-width:500px){
-    
+    .hvr-underline-from-center{
+        font-size: .8em;
+    }
+    .home--body{
+        padding: 24px;
+    }
 }

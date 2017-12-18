@@ -49,10 +49,8 @@ width: 100vw;
 `
 
 export default class Home extends Component {
-
     render() {
         return (
-
             <StaggeredMotion
                 defaultStyles={[
                     { width: 100 },
@@ -80,13 +78,10 @@ export default class Home extends Component {
                                     <section className='home-first-section'>
                                         <div className='bg200 homebg'>SIRS AML COMPLIANCE
                                         </div>
-
                                     </section>
                                     <div className='home--body'>
-                                    <RegulatoryNotices/>
-                                    
+                                    <RegulatoryNotices/>                                    
                                     <section className='text-body'>
-
                                         <h3>SIRS: PROVIDING PARTNERED AML COMPLIANCE SERVICES</h3>
                                         <br />
                                  
@@ -96,8 +91,7 @@ export default class Home extends Component {
                                         <p>In addition to written policies and procedures, SIRS' comprehensive compliance services include AML
                 training and independet testing. In provideing these services, SIRS will work as your partner to help
                 your company become fully compliant with AML regulations applicable to your business activites.
-            </p>
-                                    
+            </p>                                    
                                     <br />
                                     <div id='border-bottom'></div>
                                    

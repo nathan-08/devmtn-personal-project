@@ -110,12 +110,12 @@ class Admin extends React.Component{
         this.getDataFromServer()
     }
     
-    render(){        
+    render(){         
         const quotes = this.props.quotes
         return this.props.userData.id ? (
             <div id='admin' className='Component'>
             
-            {this.props.userData ? 
+            {this.props.userData ?  
             
             <div id='admin-component'>
             <section id='top'>
@@ -130,7 +130,7 @@ class Admin extends React.Component{
             <a href={process.env.REACT_APP_LOGOUT}><button className='submit-button hvr-fade'>LOGOUT</button></a> 
             </div>
             <div id='admin-content'>
-            <button className='submit-button hvr-fade' onClick={this.sendChangesToDB}>CONFIRM CHANGES</button>
+              <button className='submit-button hvr-fade'  onClick={this.sendChangesToDB}>CONFIRM CHANGES</button>
             <br/>
             <div id='quotes' className='admin-content-box'> 
             <h3>Quotes</h3><p style={{textAlign:'center'}}>One of these quotes will be selected randomly at load and displayed at the bottom of the Regulatory Notices sidebar </p>
@@ -194,7 +194,7 @@ class Admin extends React.Component{
             
             
             : 'Unauthorized'}
-            {this.state.dialogFlag && <DialogPlus updateFields={this.updateFields} toggleFlag={this.toggleDialogFlag} 
+            {this.state.dialogFlag && <DialogPlus toggleFlag={this.toggleDialogFlag} 
                                         open={this.state.dialogFlag} message={this.state.dialogMessage}
                                         quotesArray={this.state.quotesArray} currentMessageIndex={this.state.currentMessageIndex}
                                         updateQuotesArrayBody={this.updateQuotesArrayBody}

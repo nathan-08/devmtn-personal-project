@@ -202,7 +202,7 @@ We'd love to hear from you!                                        </p>
                                         Executive Management:
                                     </h4>
 
-                                    <img src={ceo} height='300px' alt='SIRS CEO' id='ceo-img'/>
+                                    <img src={kevbeck} height='300px' alt='SIRS CEO' id='ceo-img'/>
                                     <p>
                                         Kevin A. Klundt, CAMS, Founder and CEO of Securities Industry Records Services, LLC.
 

@@ -1,0 +1,1 @@
+select * from regulatory_notices;

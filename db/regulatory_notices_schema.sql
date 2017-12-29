@@ -1,0 +1,1 @@
+create table regulatory_notices (id serial primary key, date text, title text, summary text, link text);

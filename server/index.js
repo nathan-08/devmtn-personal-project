@@ -6,7 +6,8 @@ const express = require('express')
     , Auth0Strategy = require('passport-auth0')
     , session = require('express-session')
     , massive = require('massive')
-    , nodemailer = require('nodemailer');
+    , nodemailer = require('nodemailer')
+    , ct1 = require('./db_controller1.js')
 
 const app = express()
 app.use(cors())
@@ -66,7 +67,6 @@ passport.deserializeUser((ID, done)=>{
     console.log('deserialized user')
     const db = app.get('db')
     db.find_user_by_session([ID]).then ( user=> {
-         console.log('user ', user)
         return process.env.ADMIN_EMAILS.split(' ').includes(user[0].email) //admin email must be in .env        
         ? done(null, user) : null 
     })
@@ -98,6 +98,28 @@ app.put('/quotes/update', (req,res)=>{
         for(let i = 0; i < quotesArray.length; i++){
             db.add_quote(quotesArray[i].body, quotesArray[i].citation, quotesArray[i].cite_link)
         }
+    })
+})
+// add to reg_notice table
+app.post('/regulatory-notice', (req, res)=>{
+    const db = app.get('db')        
+    const {date, title, summary, link} = req.body
+    console.log('got this from front: ', date, title, summary, link)
+    db.add_regulatory_notice(date, title, summary, link)
+      .then(()=>{res.status(200).send('okeydokey artichokey')})
+})
+// get all reg_notices
+app.get('/get-rn', (req,res)=>{
+    const db = app.get('db')
+    db.get_regulatory_notices().then(result=>{
+        res.status(200).send(result)
+    })
+})
+//delete reg_notice
+app.delete('/delete-rn/:id', (req,res)=>{
+    const db = app.get('db')
+    db.delete_reg_notice(req.params.id).then(()=>{
+        res.status(200)
     })
 })
 // get messages

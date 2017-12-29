@@ -13,7 +13,14 @@ class Admin extends React.Component{
             dialogMessage: '',
             quotesArray: [],
             currentMessageIndex: null,
-            messages: []
+            messages: [], 
+            rn: {
+                date: '',
+                title: '',
+                summary: '',
+                link: ''
+            }, 
+            rnArr: []
         }
         this.toggleDialogFlag = this.toggleDialogFlag.bind(this)
         this.getDataFromServer = this.getDataFromServer.bind(this)
@@ -25,6 +32,11 @@ class Admin extends React.Component{
         this.deleteThis = this.deleteThis.bind(this)
         this.toggleDialogAndDelete = this.toggleDialogAndDelete.bind(this)
         this.toggleDialogAndDeleteMessage = this.toggleDialogAndDeleteMessage.bind(this)
+        this.changeRnDate = this.changeRnDate.bind(this)
+        this.changeRnTitle = this.changeRnTitle.bind(this)
+        this.changeRnSummary = this.changeRnSummary.bind(this)
+        this.changeRnLink = this.changeRnLink.bind(this)
+        this.sendRn = this.sendRn.bind(this)
     }
     updateFields(){
         // this function will set state 
@@ -106,13 +118,57 @@ class Admin extends React.Component{
             currentMessageIndex: i + '_DELETE_MESSAGE'
         })
     }
+    sendRn(){
+        const {date, title, summary, link} = this.state.rn
+        //check date in proper format
+        if(date.match(/^\d{1,2}\/\d{1,2}\/\d{4}$/)){
+        axios.post('/regulatory-notice', {date, title, summary, link})
+        this.setState({
+            rn: {
+                date: '',
+                title: '',
+                summary: '',
+                link: ''
+            }
+        })
+    } else alert("Invalid DATE format\nShould look like: 01/01/2000")
+    }
+    deleteRn(id){
+        axios.delete(`/delete-rn/${id}`)
+        alert('ITEM DELETED')
+    }
+    changeRnDate(event){
+        this.setState({
+            rn: Object.assign({}, this.state.rn, {date: event.target.value})
+        })
+    }
+    changeRnTitle(event){
+        this.setState({
+            rn: Object.assign({}, this.state.rn, {title: event.target.value})
+        })
+    }
+    changeRnSummary(event){
+        this.setState({
+            rn: Object.assign({}, this.state.rn, {summary: event.target.value})
+        })
+    }
+    changeRnLink(event){
+        this.setState({
+            rn: Object.assign({}, this.state.rn, {link: event.target.value})
+        })
+    }
     componentWillMount(){
         this.getDataFromServer()
+        axios.get('/get-rn').then(rnArr=>{
+            console.log('rnArr: ', rnArr)    
+            this.setState({rnArr:rnArr.data})
+        })
     }
+
     
     render(){         
         const quotes = this.props.quotes
-        return this.props.userData.id ? (
+        return this.props.userData.id || true ? (
             <div id='admin' className='Component'>
             
             {this.props.userData ?  
@@ -186,7 +242,23 @@ class Admin extends React.Component{
             </div>
             </div>
             </section>
-            
+            <h3>add to regulatory notices</h3>
+            <p>date(numeric month/day/year):</p>
+            <input value={this.state.rn.date} onChange={this.changeRnDate} placeholder="e.g. 01/01/2000"/>
+            <p>article title</p>
+            <textarea value={this.state.rn.title} onChange={this.changeRnTitle}/>
+            <p>article summary</p><textarea value={this.state.rn.summary} onChange={this.changeRnSummary}/>
+            <p>link</p><textarea value={this.state.rn.link} onChange={this.changeRnLink}/>
+            <button onClick={this.sendRn}>SEND TO DB</button>
+            <div>
+            {
+                this.state.rnArr[0]? this.state.rnArr.map((rn,index)=>(
+                    <div key={index}>
+                        {rn.title} <button onClick={()=>this.deleteRn(rn.id)}>delete</button>
+                    </div>
+                )) : 'no regulatory notices retrieved'
+            }
+            </div>
             
             
             

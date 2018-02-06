@@ -100,7 +100,8 @@ h3 {
     font-family: 'Roboto', sans-serif;
     font-size:1.2em;
     text-align: center;
-    font-weight: 400;
+    font-weight: bold;
+    color: #183394;
 }
 p {
     letter-spacing: .05em;

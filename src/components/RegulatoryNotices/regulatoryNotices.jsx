@@ -67,13 +67,13 @@ class regulatoryNotices extends React.Component {
                 <br />
                 <h3>REGULATORY NOTICES</h3>
                 <br />
-                <h3>GENERATED FROM DB</h3>
+                {/* <h3>GENERATED FROM DB</h3> */}
                 <br />
                 {this.state.rnArr ?
 
                     this.state.rnArr.map((notice, index) => {
                         return (
-                            <div>
+                            <div key={index}>
                                 <h4><a href={notice.link}>{notice.title} </a></h4>
                                 <p>({notice.date}){notice.summary} </p>
                             </div>
@@ -87,8 +87,8 @@ class regulatoryNotices extends React.Component {
 
                 }
                 <br />
-                <h3>/GENERATED FROM DB</h3>
-                <h4><a href='http://www.finra.org/sites/default/files/2017-regulatory-and-examination-priorities-letter.pdf'>FINRA's 2017 Regulatory and Examination Priorities Letter</a></h4>
+                
+                {/* <h4><a href='http://www.finra.org/sites/default/files/2017-regulatory-and-examination-priorities-letter.pdf'>FINRA's 2017 Regulatory and Examination Priorities Letter</a></h4>
                 <p>
                     (1/4/2017) FINRA announced that its 2017 examinations “will continue to focus on firms’ anti-money laundering programs….”
     </p>
@@ -109,7 +109,7 @@ class regulatoryNotices extends React.Component {
                 <p>
                     In this December 2015 Press Release, FinCEN announced the assessment of a $200,000 civil money penalty against a Los Angeles precious metals business.
     </p>
-                <br />
+                <br /> */}
                 <img src={this.state.imgIndex} alt='nyc' id='nyc-img' />
                 <br />
                 <p>

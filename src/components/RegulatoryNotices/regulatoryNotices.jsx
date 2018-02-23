@@ -118,6 +118,10 @@ class regulatoryNotices extends React.Component {
                 <br />
                 <p className='quoted'> ~{this.props.quotes[0] ? this.props.quotes[this.state.currentQuoteIndex].citation : null}
                 </p>
+                <br/>
+                <p>{this.props.quote}</p>
+                <br/>
+                <p className='quoted'><a href={this.props.url}>{this.props.cite}</a></p>
             </div >
         )
     }

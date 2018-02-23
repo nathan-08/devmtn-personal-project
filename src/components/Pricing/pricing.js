@@ -66,16 +66,16 @@ export default class Pricing extends Component {
                                 <div className='Pricing Component'>
                                     <div className='pricingbg bg200'>PRICING AND ENROLLMENT</div>
                                     <div className='home--body'>
-                                    <RegulatoryNotices/>
+                                    <RegulatoryNotices quote={'"And moreover, I would desire that ye should consider on the blessed and happy state of those that keep the commandments of God. For behold, they are blessed in all things, both temporal and spiritual; and if they hold out faithful to the end they are received into heaven, that thereby they may dwell with God in a state of never-ending happiness. O remember, remember that these things are true; for the Lord God hath spoken it."'} cite={'~Mosiah 2:41'} url={'https://www.lds.org/scriptures/bofm/mosiah/2?lang=eng'}/>
                                     <div className='text-body'>
                                         <h3>
                                             AML Compliance Program, Training & Testing
                 </h3>
                                         <br />
-                                        <h4>
+                                        <h4 className="pricing-headers">
                                             Residential Mortgage Lender & Originator ("RMLO"): $500
                 </h4>
-                                        <p>
+                                        <p className="pricing-headers">
                                             SIRS' services for RMLOs include:
                 </p>
                                         <ul>
@@ -92,7 +92,7 @@ export default class Pricing extends Component {
                     provide documentation of your firm’s compliance with its obligation to monitor applications in order to detect suspicious activities.
                     </li>
                                             <li>
-                                                Independent AML Test. As required by the BSA (31 C.F.R. § 1029.210(b)(4)), SIRS will conduct an annual review of your policies, procedures and business practices to ensure that they are in compliance with AML requirements. After conducting the test, we will provide you with a 2-5
+                                                Independent AML Test. As required by the BSA (<a href="http://www.ecfr.gov/cgi-bin/text-idx?c=ecfr&sid=bffae9fa0cb8afd4ddeef2babb2600b4&rgn=div5&view=text&node=31:3.1.6.1.13&idno=31">31 C.F.R.31 C.F.R. § 1029.210(b)(4)</a>), SIRS will conduct an annual review of your policies, procedures and business practices to ensure that they are in compliance with AML requirements. After conducting the test, we will provide you with a 2-5
                     page report of our findings. With each finding, we will provide our expert recommendation concerning the best way to correct the deficiency.
                     </li>
                                         </ul>
@@ -100,15 +100,15 @@ export default class Pricing extends Component {
                                     <br />
                                     <div id='border-bottom' />
                                     
-                                        <h4>
+                                        <h4 className="pricing-headers">
                                             Money Services Business ("MSB"): $500-2,000
                 </h4>
-                                        <p>
+                                        <p className="pricing-headers">
                                             SIRS’ AML compliance services are designed for most types of MSBs,
                 including check cashers ($500), dealers in foreign exchange, and money transmitters ($2,000).
                 </p>
                                         <br />
-                                        <p>
+                                        <p className="pricing-headers">
                                             SIRS' services for MSBs include:
                 </p>
                                         <ul>
@@ -124,7 +124,7 @@ export default class Pricing extends Component {
                         These documents are essential to your AML Compliance Program and will help to ensure that it meets your obligations under the BSA.
 
                     </li>
-                                            <li>Independent AML Review. As required by the BSA (31 C.F.R. § 1022.210(d)(4)), SIRS will conduct an annual review of your policies, procedures
+                                            <li>Independent AML Review. As required by the BSA (<a href="http://www.ecfr.gov/cgi-bin/text-idx?c=ecfr&sid=bffae9fa0cb8afd4ddeef2babb2600b4&rgn=div5&view=text&node=31:3.1.6.1.13&idno=31">31 C.F.R. § 1022.210(d)(4)</a>), SIRS will conduct an annual review of your policies, procedures
                         and internal controls to ensure that they satisfy AML regulatory requirements. After conducting the review, we will provide you with a 4-6 page report of our findings
                         and recommendations. With each finding, we will provide our expert recommendation concerning the best way to address the deficiency.
 
@@ -135,15 +135,15 @@ export default class Pricing extends Component {
                                     <div id='border-bottom' />
                                     
                                         <br />
-                                        <h4>
+                                        <h4 className="pricing-headers">
                                             Securities Broker/Dealer: $2,500
                 </h4>
-                                        <p>
+                                        <p className="pricing-headers">
                                             SIRS' services for broker/dealers include:
                 </p>
                                         <br />
                                         <ul>
-                                            <li>Independent AML Test. As required by FINRA Rule 3310(c), SIRS will conduct an independent review of your AML compliance program.
+                                            <li>Independent AML Test. As required by <a href="http://finra.complinet.com/en/display/display_main.html?rbid=2403&element_id=8656">FINRA Rule 3310(c)</a>, SIRS will conduct an independent review of your AML compliance program.
                         After the test is completed, you will receive a detailed test report that includes SIRS' findings and recommendations.
                         With each finding, we will provide our expert recommendation concerning the best way to address the deficiency.
                     </li>
@@ -153,7 +153,7 @@ export default class Pricing extends Component {
                                         </ul>
                                         <br />
                                         <h4>
-                                            Note regarding FINRA's AML Template for Small Firms:
+                                            Note regarding FINRA's <a href="http://www.finra.org/Industry/Issues/AML/p006340">AML Template for Small Firms</a>:
                 </h4>
                                         <h4>
                                             While some updates are needed, FINRA’s AML Small Firm Template provides an excellent set of AML policies and procedures for broker/dealers.
@@ -163,10 +163,10 @@ export default class Pricing extends Component {
                                     <br />
                                     <div id='border-bottom' />
                                     
-                                        <h4>
+                                        <h4 className="pricing-headers">
                                             Dealer in Precious Metals, Stones & Jewels: $1,000
                 </h4>
-                                        <p>
+                                        <p className="pricing-headers">
                                             SIRS' services for precious metals and jewelry dealers include:
                 </p>
                                         <br />
@@ -180,7 +180,7 @@ export default class Pricing extends Component {
                                             <li>Training Materials. We will also provide you with training materials that cover the major points of AML requirements for dealers in precious metals, stones and jewels.
                         These materials may be distributed to your employees to meet your obligation to provide AML training.
                     </li>
-                                            <li>Independent AML Test. As required by 31 C.F.R. § 1027.210(b)(4), SIRS will conduct an independent review of your AML compliance program. After the test is completed, you will receive a detailed test report that includes SIRS' findings and recommendations.
+                                            <li>Independent AML Test. As required by <a href="http://www.ecfr.gov/cgi-bin/text-idx?c=ecfr&sid=bffae9fa0cb8afd4ddeef2babb2600b4&rgn=div5&view=text&node=31:3.1.6.1.13&idno=31">31 C.F.R. § 1027.210(b)(4)</a>, SIRS will conduct an independent review of your AML compliance program. After the test is completed, you will receive a detailed test report that includes SIRS' findings and recommendations.
                         With each finding, we will provide our expert recommendation concerning the best way to address the deficiency.
                     </li>
                                         </ul>
@@ -193,7 +193,7 @@ export default class Pricing extends Component {
                 </h3>
                                         <br />
                                         <p>
-                                            To request a formal quotation, contact SIRS via phone (866.568.7151) or email (info@sirsco.com).
+                                            To request a formal quotation, contact SIRS via phone (866.568.7151) or email (<a href="mailto:info@sirsco.com">info@sirsco.com</a>).
                 We will respond by sending you the quotation and additional information about our services.
                 </p>
                                         <br />

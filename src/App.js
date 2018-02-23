@@ -26,7 +26,7 @@ class App extends Component {
           <NavLink to='/' > < button className='hvr-underline-from-center btn' > Home </button> </NavLink >
           <NavLink to='/pricing' > < button className='hvr-underline-from-center btn' > Pricing & Enrollment </button> </NavLink >
           <NavLink to='/regulatory'>< button className='hvr-underline-from-center btn' > Regulatory References </button></NavLink>
-          <NavLink to='/searule'>< button className='hvr-underline-from-center btn' > SEA Rule </button></NavLink>
+          <NavLink to='/searule'>< button className='hvr-underline-from-center btn' > Rule 17a-4 </button></NavLink>
           <NavLink to='/contact'>< button className='hvr-underline-from-center btn' > Contact / About </button></NavLink>
 
         </nav>
@@ -44,7 +44,7 @@ class App extends Component {
 
 
         <div id='footer' >
-        <p>Copyright © 2007 - 2017 Securities Industry Records Services, LLC. All Rights Reserved.</p>
+        <p>Copyright © 2007 - 2018 Securities Industry Records Services, LLC. All Rights Reserved.</p>
 
         
         {this.props.userData.user_name ? <NavLink to='/admin'><p style={{color: 'black'}}>Admin page</p></NavLink> 

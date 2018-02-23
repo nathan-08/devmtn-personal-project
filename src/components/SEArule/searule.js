@@ -63,31 +63,13 @@ export default class SEArule extends Component{
             <ViewBox bgColor={colors[4]} width={styles[4].width}>
               <ViewBody>
             <div className='SEArule Component'>
-            <div className='searulebg bg200'>SEA RULE</div>
+            <div className='searulebg bg200'>SEA RULE 17a-4</div>
 
             <div className='home--body'>
-            <RegulatoryNotices/>
+            <RegulatoryNotices quote={'"And moreover, I say unto you, that there shall be no other name given nor any other way nor means whereby salvation can come unto the children of men, only in and through the name of Christ, the Lord Omnipotent."'} cite={'~Mosiah 3:17'} url={'https://www.lds.org/scriptures/bofm/mosiah/3?lang=eng'}/>
             <div className='text-body'>
-            <h3>SIRS' Third-party Access ("TAP" or "D3P") Compliance Services</h3>
+            <h3>SIRS' Designated Third Party ("D3P") Compliance Services</h3>
             <br/>
-            
-            <h4> 
-                2017 Regulatory and Examination Priorities Letter
-            </h4>
-            <br/>
-            <p>
-            In its 2017 Regulatory and Examination Priorities Letter, FINRA informed firms that its 2017 cycle examinations would include 
-            a review of B/D compliance with the requirements of SEA Rule 17a-4. FINRA stated, “in multiple instances, firms have failed to fulfill one or more of their obligations under Securities Exchange Act (SEA) Rule 17a-4(f) that requires firms to, among other things, 
-            preserve certain records in a non-rewriteable, non-erasable format, commonly known as write once read many (WORM) format.”
-            </p>
-            <br/>
-            <p>
-            Since 2007-2008, B/Ds have generally satisfied Rule 17a-4’s requirements pertaining to the archiving of emails. Until recently, however, it was difficult to find a cost-effective, WORM storage system for a B/D’s static files (PDF, Excel, Word, etc.). As shown below, 
-            cost-effect and fully compliant archiving services are now available through reputable providers including Microsoft and Amazon.
-            </p>
-            <br/>
-            
-            
             
             <br/>
             <div id='border-bottom'/>
@@ -103,7 +85,7 @@ export default class SEArule extends Component{
             Rule 17a-4(f) has two main requirements: 
             </p>
             <br/>
-            <h4>
+            <h4 className="pricing-headers">
                 Compliant Data Backup
             </h4>
             
@@ -118,14 +100,20 @@ export default class SEArule extends Component{
             </p>
             <br/>
                 
-<h4>Amazon Glacier Receives Third-Party Assessment for SEC Rule 17a-4(f) from Cohasset Associates</h4>
+<ul>
+<li className="pricing-headers"><a href="https://aws.amazon.com/about-aws/whats-new/2015/09/amazon-glacier-receives-third-party-compliance-assessment-for-sec-rule-17a-4f-from-cohasset-associates-inc/">
+Amazon Glacier Receives Third-Party Assessment for SEC Rule 17a-4(f) from Cohasset Associates
+</a></li>
                 
                 
-<h4>Office 365 Archiving Now Meets SEC Rule 17a-4 Requirements</h4>
+<li className="pricing-headers"><a href="https://blogs.office.com/2015/11/10/office-365-exchange-online-archiving-now-meets-sec-rule-17a-4-requirements/">
+Office 365 Archiving Now Meets SEC Rule 17a-4 Requirements
+</a></li>
+</ul>
                 
             
             <br/>
-            <h4>Third-party Access (“TPA” or "D3P")</h4>
+            <h4 className="pricing-headers">Designated Third Party ("D3P") Services</h4>
             <p>17a-4(f)(3)(vii) requires a B/D to engage the services of “at least one third party…, 
                 who has access to and the ability to download information from the [B/D’s] electronic storage media.”
                 </p>
@@ -148,7 +136,7 @@ export default class SEArule extends Component{
             </p>
             
             <br/>
-            <h4>
+            <h4 className="pricing-headers">
             Third-party Undertaking Letter
             </h4>
             <p>
@@ -156,7 +144,7 @@ export default class SEArule extends Component{
             designated third party, with the B/D's designated examining authority. SIRS will provide your firm with this signed undertaking letter.
             </p>
             <br/>
-            <h4>
+            <h4 className="pricing-headers">
                 Storage Media Representation Template
             </h4>
             <p>

@@ -165,20 +165,22 @@ We'd love to hear from you!                                        </p>
                                     <h4>Telephone: </h4>
                                     <p>801.931.3320</p>
                                     <br/>
+                                    <h4>Fax: </h4>
+                                    <p>801.931.3320</p>
                                     </div>
                                         </div>
                                     </div>
                                     {/* fun about section */}
                                     <div id='about'>
                                     <h3>About Us</h3>
-                                    <p>Firm History:</p>
+                                    <h4 className="pricing-headers">Firm History</h4>
                                     <p> 
                                     Since 2007, Securities Industry Records Services, LLC ("SIRS") has been a premier provider of low-cost, regulatory compliance services for financial institutions. Specializing in AML compliance services, SIRS has developed training, independent testing, and compliance programs for various non-bank financial institutions.
                                     </p>
                                     <br/>
-                                    <p>
-                                    The Partner Approach to AML compliance:
-                                    </p>
+                                    <h4 className="pricing-headers">
+                                    The Partner Approach to AML compliance
+                                    </h4>
                                     <p>
                                     The regulatory requirements placed on financial institutions can be onerous. Recognizing that financial institutions are often burdened by these demands, SIRS acts as an institution’s AML compliance partner to help lighten this load.   
                                     </p>
@@ -191,14 +193,14 @@ We'd love to hear from you!                                        </p>
                                     Similarly, as changes to your policies or procedures are needed, SIRS will work with you to help make these changes.
                                     </p>
                                     <br/>
-                                    <h4>
-                                        Discounted Pricing through Electronic Delivery:
+                                    <h4 className="pricing-headers">
+                                        Discounted Pricing through Electronic Delivery
                                     </h4>
                                     <p>
                                     Through the use of SIRS' secure cloud server, financial institutions are able to provide their AML program documents electronically to SIRS. SIRS is then able to access these files in order to conduct the required test of the institution's AML program. Phone and email communications with firm management allow SIRS personnel to easily address any issues that may arise as we work through the testing process. This use of modern communication and information sharing technologies eliminates travel time and costs and allows SIRS to perform its review in a highly efficient and cost-effective manner.
                                     </p>
                                     <br/>
-                                    <h4>
+                                    <h4 className="pricing-headers">
                                         Executive Management:
                                     </h4>
 

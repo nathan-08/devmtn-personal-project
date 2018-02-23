@@ -80,7 +80,7 @@ export default class Home extends Component {
                                         </div>
                                     </section>
                                     <div className='home--body'>
-                                    <RegulatoryNotices/>                                    
+                                    <RegulatoryNotices quote={'"And we talk of Christ, we rejoice in Christ, we preach of Christ, we prophesy of Christ, and we write according to our prophecies, that our children may know to what source they may look for a remission of their sins."'} cite={'~2 Nephi 25:26'} url={'http://www.lds.org/scriptures/bofm/2-ne/25?lang=eng'}/>                                   
                                     <section className='text-body'>
                                         <h3>SIRS: PROVIDING PARTNERED AML COMPLIANCE SERVICES</h3>
                                         <br />
@@ -97,11 +97,11 @@ export default class Home extends Component {
                                    
                                     
                                         <h3>
-                                            SIRS' AML COMPLIANCE SERVICES
+                                            AML Compliance Services
                 </h3>
                                         <br />
                                    
-                                        <p>31 CFR Chapter X requires each financial institution to develop and implement a
+                                        <p><a href="https://www.ecfr.gov/cgi-bin/text-idx?SID=9165c297e31e205af91591703d339090&mc=true&tpl=/ecfrbrowse/Title31/31chapterX.tpl">31 CFR Chapter X</a> requires each financial institution to develop and implement a
                     written anti-money laundering compliance program. At a minimum, each institution'section
                     AML compliance program must:
                     </p>
@@ -138,6 +138,8 @@ export default class Home extends Component {
                                         compliance programs includes the written policies, procedures, and internal controls required by BSA regulations.
                                             </p>
                                         <br />
+                                        <br />
+                                    <div id='border-bottom'></div>
                                             <h3>Training
                                                 </h3>
                                         
@@ -149,6 +151,8 @@ export default class Home extends Component {
                                                 These presentations can be shown to an institution's employees to satisfy the firm's obligations to provide AML training.
                                                     </p>
                                         <br />
+                                        <br />
+                                    <div id='border-bottom'></div>
                                         <h3>Independent Testing
                                             </h3>
                                             
@@ -169,6 +173,8 @@ export default class Home extends Component {
                                     strengths of your program and identifies steps that can be taken to address any unresolved deficiencies.
                                     </p>
                                         <br />
+                                        <br />
+                                    <div id='border-bottom'></div>
                                         <h3>Scope of Testing:</h3>
                                         <br />
                                         

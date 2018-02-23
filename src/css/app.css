@@ -14,11 +14,11 @@
 .navbar-thin{
     height:40px;
     width:100%;
-    background-color: white;
+    background-color: #183394;
     position:sticky;
     top:0px;
     z-index:100;
-    border-bottom: 1px solid #74b01b;
+    /* border-bottom: 1px solid #74b01b; */
     display: flex;
     justify-content: flex-end;
     padding-right: 24px;
@@ -46,7 +46,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 }
 .logo{
-    background-image: url('./../img/header1.png');
+    background-image: url('./../img/header1-alt.png');
     height:100%; 
     background-repeat: no-repeat;
     
@@ -193,6 +193,8 @@ a{
 }
 /****************************************/
 .hvr-underline-from-center{
+    background-color:#183394;
+    color:white;
     font-size: 1em;
     font-family: Roboto, sans-serif
 }

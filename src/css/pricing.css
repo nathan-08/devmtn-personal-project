@@ -12,3 +12,8 @@
     margin-bottom: 12px;
     border-bottom: 1px solid gray;
 }
+
+.pricing-headers{
+    font-weight:500;
+    color:#183395;
+}
